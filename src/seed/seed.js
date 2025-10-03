@@ -1,13 +1,19 @@
+// Carga las variables de entorno desde el archivo .env
 require('dotenv').config();
+// Importa el pool de conexiones a la base de datos
 const pool = require('../config/db');
+// Importa la librería bcrypt para encriptar contraseñas
 const bcrypt = require('bcrypt');
 
+// Función autoejecutable para inicializar la base de datos con datos de prueba
 (async () => {
   try {
+    // Elimina las tablas existentes si ya existen (en orden inverso de dependencia para evitar errores de FK)
     await pool.query('DROP TABLE IF EXISTS reservations');
     await pool.query('DROP TABLE IF EXISTS vehicles');
     await pool.query('DROP TABLE IF EXISTS users');
 
+    // Crea la tabla de usuarios
     await pool.query(`
       CREATE TABLE users (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -19,6 +25,7 @@ const bcrypt = require('bcrypt');
       )
     `);
 
+    // Crea la tabla de vehículos
     await pool.query(`
       CREATE TABLE vehicles (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -32,6 +39,7 @@ const bcrypt = require('bcrypt');
       )
     `);
 
+    // Crea la tabla de reservas, con claves foráneas a usuarios y vehículos
     await pool.query(`
       CREATE TABLE reservations (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -47,20 +55,23 @@ const bcrypt = require('bcrypt');
       )
     `);
 
+    // Encripta las contraseñas para los usuarios de prueba
     const passAdmin = await bcrypt.hash('admin123', 10);
     const passUser = await bcrypt.hash('sebas123', 10);
 
+    // Inserta usuarios de prueba (un administrador y un cliente)
     await pool.query('INSERT INTO users (nombre, email, password, rol) VALUES (?,?,?,?)', ['Admin', 'admin@ejemplo.com', passAdmin, 'admin']);
     await pool.query('INSERT INTO users (nombre, email, password, rol) VALUES (?,?,?,?)', ['Sebas', 'sebas@ejemplo.com', passUser, 'cliente']);
 
+    // Inserta vehículos de prueba
     await pool.query('INSERT INTO vehicles (marca, modelo, anio, patente, precioPorDia) VALUES (?,?,?,?,?)', ['Toyota', 'Etios', 2018, 'ABC123', 30.00]);
     await pool.query('INSERT INTO vehicles (marca, modelo, anio, patente, precioPorDia) VALUES (?,?,?,?,?)', ['VW', 'Gol', 2017, 'DEF456', 25.00]);
     await pool.query('INSERT INTO vehicles (marca, modelo, anio, patente, precioPorDia) VALUES (?,?,?,?,?)', ['Ford', 'Ka', 2019, 'GHI789', 28.50]);
 
-    console.log('Seed completado ✅');
-    process.exit(0);
+    console.log('Seed completado ✅'); // Mensaje de éxito
+    process.exit(0); // Termina el proceso con éxito
   } catch (err) {
-    console.error(err);
-    process.exit(1);
+    console.error(err); // Muestra cualquier error que ocurra
+    process.exit(1); // Termina el proceso con un código de error
   }
 })();
