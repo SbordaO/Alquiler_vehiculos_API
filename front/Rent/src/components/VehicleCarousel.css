@@ -1,0 +1,85 @@
+.vehicle-carousel-section {
+  padding: 4rem 0;
+  background-color: var(--nuvia-blue);
+  color: var(--nuvia-white);
+  text-align: center;
+}
+
+.carousel-section-title {
+  font-size: 2.5rem;
+  color: var(--nuvia-gold);
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+.vehicle-carousel-container {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  padding: 1rem 0;
+}
+
+.carousel-item-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  flex-shrink: 0;
+  margin: 0 1.2rem; /* Adjusted margin for better spacing */
+  transition: transform 0.3s ease;
+}
+
+.carousel-item {
+  width: 320px; /* Slightly wider items */
+  height: 270px; /* Adjusted height */
+  background-color: var(--nuvia-white);
+  border-radius: 12px; /* More rounded corners */
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Stronger, softer shadow */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item:hover {
+  transform: translateY(-12px) scale(1.04); /* More pronounced hover effect */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.carousel-item-image {
+  width: 100%;
+  height: 170px; /* Adjusted image height */
+  object-fit: cover;
+}
+
+.carousel-item-info {
+  padding: 1.2rem; /* Adjusted padding */
+  color: var(--nuvia-blue);
+  text-align: left;
+}
+
+.carousel-item-info h3 {
+  font-size: 1.3rem; /* Slightly larger title */
+  margin: 0 0 0.6rem;
+  font-weight: 700;
+}
+
+.carousel-item-info p {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--nuvia-dark-gray);
+}
+
+.carousel-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--nuvia-white);
+  padding: 2rem;
+}
+
+.carousel-message.error {
+  color: var(--nuvia-gold);
+}

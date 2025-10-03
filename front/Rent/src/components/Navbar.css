@@ -1,0 +1,112 @@
+/* Navbar.css */
+.navbar {
+  background-color: var(--nuvia-white);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 2.5rem;
+}
+
+.navbar-logo {
+  color: var(--nuvia-blue);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: auto; /* Push other elements to the right */
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2.5rem; /* Increased gap for a more spacious look */
+}
+
+.nav-menu-right {
+  margin-left: auto; /* Push this menu to the far right */
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  color: var(--nuvia-dark-gray);
+  text-decoration: none;
+  padding: 0.5rem 0;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-links:hover {
+  color: var(--nuvia-gold);
+}
+
+.nav-links.active {
+  color: var(--nuvia-blue);
+  border-bottom: 3px solid var(--nuvia-gold);
+}
+
+/* Unified button styling */
+.nav-button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-out;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
+
+.nav-button.primary {
+  background-color: var(--nuvia-blue);
+  color: var(--nuvia-white);
+  border-color: var(--nuvia-blue);
+}
+
+.nav-button.primary:hover {
+  background-color: #081c35; /* Darker blue */
+  border-color: #081c35;
+}
+
+.nav-button.secondary {
+  background-color: transparent;
+  color: var(--nuvia-blue);
+  border-color: var(--nuvia-blue);
+}
+
+.nav-button.secondary:hover {
+  background-color: var(--nuvia-blue);
+  color: var(--nuvia-white);
+}
+
+.nav-button.logout {
+  background-color: transparent;
+  color: var(--nuvia-blue);
+  border-color: transparent;
+}
+
+.nav-button.logout:hover {
+  color: var(--nuvia-gold);
+}

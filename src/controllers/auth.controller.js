@@ -37,8 +37,10 @@ exports.login = async (req, res) => {
     const ok = await bcrypt.compare(password, user.password);
     if (!ok) return res.status(400).json({ ok: false, msg: 'Credenciales inválidas' });
 
-    const token = jwt.sign({ id: user.id, rol: user.rol }, JWT_SECRET, { expiresIn: '8h' });
-    res.json({ ok: true, token });
+    // Generar JWT
+    const token = jwt.sign({ id: user.id, email: user.email, rol: user.rol }, process.env.JWT_SECRET, { expiresIn: '1h' });
+
+    res.json({ ok: true, msg: 'Login exitoso', token, rol: user.rol });
   } catch (err) {
     res.status(500).json({ ok: false, msg: 'Error interno' });
   }

@@ -15,8 +15,9 @@ app.use(express.json());
 
 // Rutas
 app.use('/auth', authRoutes);
-app.use('/usuarios', usersRoutes);
-app.use('/vehiculos', vehiclesRoutes);d
+app.use('/vehiculos', require('./src/routes/vehicles.routes'));
+app.use('/usuarios', require('./src/routes/users.routes'));
+app.use('/api/upload', require('./src/routes/upload.routes')); // Nueva ruta para subidas
 app.use('/reservas', reservationsRoutes);
 
 // Error handler simple

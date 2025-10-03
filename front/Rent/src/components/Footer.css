@@ -1,0 +1,56 @@
+.footer {
+  background-color: var(--nuvia-blue);
+  color: var(--nuvia-white);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-brand {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.footer-slogan {
+  font-size: 1.1rem;
+  color: var(--nuvia-gold);
+  margin-bottom: 2rem;
+}
+
+.footer-contact {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-contact h3 {
+  font-size: 1.3rem;
+  color: var(--nuvia-white);
+  margin-bottom: 1rem;
+}
+
+.footer-contact p {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-contact a {
+  color: var(--nuvia-gold);
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}

@@ -1,0 +1,116 @@
+/* Form.css */
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinea arriba para que se vea bien en móvil */
+  padding: 2rem;
+  min-height: calc(100vh - 80px - 70px); /* Resta altura de navbar y footer */
+}
+
+.form-card {
+  background-color: var(--nuvia-white);
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* Slightly wider forms */
+  width: 100%;
+  margin: 3rem auto;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--nuvia-blue);
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+.form-group {
+  margin-bottom: 1.8rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  color: var(--nuvia-dark-gray);
+  font-size: 1.05rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  font-size: 1rem;
+  color: var(--nuvia-dark-gray);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--nuvia-blue);
+  box-shadow: 0 0 0 4px rgba(10, 35, 66, 0.15);
+}
+
+.form-button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--nuvia-blue);
+  color: var(--nuvia-white);
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-button:hover {
+  background-color: #081c35; /* Darker blue */
+  transform: translateY(-2px);
+}
+
+.form-button:disabled {
+  background-color: #a9a9a9;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error-message {
+  color: var(--nuvia-error);
+  background-color: rgba(231, 76, 60, 0.1);
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.success-message {
+  color: #16a085;
+  background-color: rgba(22, 160, 133, 0.1);
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.form-switch-link {
+  display: block;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--color-text-secondary);
+}
+
+.form-switch-link a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.form-switch-link a:hover {
+  text-decoration: underline;
+}

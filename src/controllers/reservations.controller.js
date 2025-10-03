@@ -5,6 +5,8 @@ exports.create = async (req, res) => {
     const { vehicleId, desde, hasta } = req.body;
     const userId = req.user.id;
 
+    console.log(`Attempting to create reservation for vehicleId: ${vehicleId}, desde: ${desde}, hasta: ${hasta}`);
+
     const [veh] = await pool.query('SELECT * FROM vehicles WHERE id = ?', [vehicleId]);
     if (!veh.length) return res.status(404).json({ ok: false, msg: 'Vehículo no encontrado' });
 
@@ -34,8 +36,20 @@ exports.create = async (req, res) => {
 
 exports.list = async (req, res) => {
   try {
-    let query = `SELECT r.*, v.marca, v.modelo FROM reservations r
-                 JOIN vehicles v ON v.id = r.vehicleId`;
+    let query = `
+      SELECT 
+        r.id,
+        r.desde,
+        r.hasta,
+        r.total,
+        r.estado,
+        v.marca AS vehicle_marca,
+        v.modelo AS vehicle_modelo,
+        u.email AS user_email
+      FROM reservations r
+      JOIN vehicles v ON r.vehicleId = v.id
+      JOIN users u ON r.userId = u.id
+    `;
     let params = [];
 
     if (req.user.rol !== 'admin') {
@@ -46,6 +60,7 @@ exports.list = async (req, res) => {
     const [rows] = await pool.query(query, params);
     res.json({ ok: true, reservations: rows });
   } catch (err) {
+    console.error(err);
     res.status(500).json({ ok: false, msg: 'Error interno' });
   }
 };
@@ -66,4 +81,23 @@ exports.cancel = async (req, res) => {
     res.status(500).json({ ok: false, msg: 'Error interno' });
   }
 };
-    
+
+exports.listByUser = async (req, res) => {
+  try {
+    const { userId } = req.params;
+    const [reservations] = await pool.query(
+      `SELECT r.id, r.desde, r.hasta, r.total, r.estado,
+              v.marca AS vehicle_marca, v.modelo AS vehicle_modelo, v.anio AS vehicle_anio,
+              u.nombre AS user_nombre, u.email AS user_email
+       FROM reservations r
+       JOIN vehicles v ON r.vehicleId = v.id
+       JOIN users u ON r.userId = u.id
+       WHERE r.userId = ?`,
+      [userId]
+    );
+    res.json({ ok: true, reservations });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ ok: false, msg: 'Error interno al obtener reservas por usuario' });
+  }
+};

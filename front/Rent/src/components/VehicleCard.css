@@ -1,0 +1,86 @@
+.vehicle-card {
+  background-color: var(--nuvia-white);
+  border: 1px solid var(--nuvia-light-gray);
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.vehicle-card-image {
+  width: 100%;
+  height: 220px; /* Slightly increased height for better visual */
+  object-fit: cover;
+  border-bottom: 1px solid var(--nuvia-light-gray);
+}
+
+.vehicle-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.vehicle-card-title {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--nuvia-blue);
+  line-height: 1.3;
+}
+
+.vehicle-card-year {
+  margin: 0 0 1rem;
+  color: var(--nuvia-dark-gray);
+  font-size: 0.95rem;
+}
+
+.vehicle-card-price-container {
+  display: flex;
+  align-items: baseline;
+  margin-top: auto; /* Pushes price to the bottom */
+  margin-bottom: 1.5rem;
+}
+
+.vehicle-card-price {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--nuvia-gold);
+  margin: 0;
+}
+
+.vehicle-card-price-label {
+  font-size: 1rem;
+  color: var(--nuvia-dark-gray);
+  margin-left: 0.5rem;
+}
+
+.vehicle-card-button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--nuvia-blue);
+  color: var(--nuvia-white);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.vehicle-card-button:hover {
+  background-color: #081c35; /* Darker blue */
+  transform: scale(1.02);
+}

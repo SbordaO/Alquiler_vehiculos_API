@@ -1,0 +1,30 @@
+.hero-container {
+  /* Using a high-quality image of an elegant car interior */
+  background: linear-gradient(rgba(10, 35, 66, 0.75), rgba(10, 35, 66, 0.75)), url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  height: 50vh; /* Increased height for more impact */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--nuvia-white);
+  padding: 2rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero-slogan {
+  font-size: 1.6rem;
+  font-weight: 300; /* Lighter font weight */
+  font-style: italic;
+  margin-top: 1rem;
+  color: var(--nuvia-gold);
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}

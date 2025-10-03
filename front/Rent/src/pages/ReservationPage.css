@@ -1,0 +1,124 @@
+/* ReservationPage.css */
+
+.reservation-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2.5rem;
+}
+
+.reservation-details-card {
+  background-color: var(--nuvia-white);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.reservation-title {
+  font-size: 2.5rem;
+  color: var(--nuvia-blue);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.reservation-vehicle-image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-details-card p {
+  font-size: 1.1rem;
+  color: var(--nuvia-dark-gray);
+  margin-bottom: 0.8rem;
+}
+
+.reservation-details-card .price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--nuvia-gold);
+  margin-top: 1.5rem;
+}
+
+.reservation-form-card {
+  background-color: var(--nuvia-white);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  max-width: 600px;
+  width: 100%;
+}
+
+.calendar-section {
+  margin-bottom: 2rem;
+}
+
+.reservation-summary {
+  background-color: var(--nuvia-light-gray);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.reservation-summary p {
+  font-size: 1.1rem;
+  color: var(--nuvia-dark-gray);
+  margin-bottom: 0.5rem;
+}
+
+.reservation-summary p strong {
+  color: var(--nuvia-blue);
+}
+
+.reservation-summary p:last-child {
+  margin-bottom: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--nuvia-gold);
+}
+
+.reserve-button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--nuvia-blue);
+  color: var(--nuvia-white);
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 2rem;
+}
+
+.reserve-button:hover {
+  background-color: #081c35;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .reservation-page-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .reservation-details-card {
+    flex: 1;
+    margin-right: 2rem;
+  }
+
+  .reservation-form-card {
+    flex: 1;
+  }
+}

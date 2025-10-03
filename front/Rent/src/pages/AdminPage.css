@@ -1,0 +1,200 @@
+/* AdminPage.css */
+
+.admin-page-container {
+  padding: 3rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.admin-page-title {
+  font-size: 2.8rem;
+  color: var(--nuvia-blue);
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.admin-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  border-bottom: 2px solid var(--nuvia-light-gray);
+}
+
+.admin-tab-button {
+  background-color: transparent;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--nuvia-dark-gray);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  bottom: -2px; /* Align with border */
+}
+
+.admin-tab-button:hover {
+  color: var(--nuvia-blue);
+}
+
+.admin-tab-button.active {
+  color: var(--nuvia-blue);
+  border-bottom: 3px solid var(--nuvia-gold);
+  font-weight: 700;
+}
+
+.admin-tab-content {
+  background-color: var(--nuvia-white);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.admin-section {
+  background-color: var(--nuvia-white);
+  border: 1px solid var(--nuvia-light-gray);
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.admin-section-title {
+  font-size: 2rem;
+  color: var(--nuvia-blue);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.admin-form-card {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.error-message {
+  color: var(--nuvia-error);
+  background-color: rgba(231, 76, 60, 0.1);
+  border: 1px solid rgba(231, 76, 60, 0.2);
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.success-message {
+  color: #16a085;
+  background-color: rgba(22, 160, 133, 0.1);
+  border: 1px solid rgba(22, 160, 133, 0.2);
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.vehicles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.vehicle-list-item {
+  display: flex;
+  align-items: center;
+  background-color: var(--nuvia-light-gray);
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.vehicle-list-item-image {
+  width: 100px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 1.5rem;
+}
+
+.vehicle-list-item-info {
+  flex-grow: 1;
+}
+
+.vehicle-list-item-info h3 {
+  font-size: 1.2rem;
+  color: var(--nuvia-blue);
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.vehicle-list-item-info p {
+  font-size: 0.95rem;
+  color: var(--nuvia-dark-gray);
+}
+
+.delete-button {
+  background-color: var(--nuvia-error); /* Rojo para eliminar */
+  color: var(--nuvia-white);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+.users-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.user-list-item {
+  display: flex;
+  align-items: center;
+  background-color: var(--nuvia-light-gray);
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  justify-content: space-between;
+}
+
+.user-list-item h3 {
+  font-size: 1.2rem;
+  color: var(--nuvia-blue);
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.user-list-item p {
+  font-size: 0.95rem;
+  color: var(--nuvia-dark-gray);
+}
+
+.make-admin-button {
+  background-color: var(--nuvia-blue); /* Azul para hacer admin */
+  color: var(--nuvia-white);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left: 1.5rem;
+}
+
+.make-admin-button:hover {
+  background-color: #081c35;
+  transform: translateY(-2px);
+}

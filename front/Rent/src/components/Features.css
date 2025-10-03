@@ -1,0 +1,50 @@
+.features-section {
+  padding: 5rem 2rem; /* More vertical padding */
+  background-color: var(--nuvia-light-gray);
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem; /* Increased gap */
+}
+
+.feature-card {
+  background-color: var(--nuvia-white);
+  border: 1px solid #e9ecef;
+  border-radius: 12px; /* More rounded corners */
+  padding: 2.5rem; /* More padding */
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Stronger, softer shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  color: var(--nuvia-gold);
+  margin-bottom: 1.5rem; /* More space below icon */
+}
+
+.feature-icon svg {
+  width: 60px; /* Larger icons */
+  height: 60px;
+}
+
+.feature-title {
+  font-size: 1.5rem; /* Larger title */
+  color: var(--nuvia-blue);
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.feature-text {
+  font-size: 1rem;
+  color: var(--nuvia-dark-gray);
+  line-height: 1.6;
+}

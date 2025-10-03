@@ -1,0 +1,90 @@
+
+.search-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem; /* Increased gap for more breathing room */
+  padding: 2.5rem 2rem; /* More padding */
+  background-color: var(--nuvia-light-gray);
+  border-radius: 12px;
+  margin: 2rem auto; /* Center the container */
+  max-width: 1200px; /* Max width for consistency */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.search-container input[type="date"] {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  font-size: 1rem;
+  color: var(--nuvia-dark-gray);
+  flex-grow: 1; /* Allow inputs to grow */
+  max-width: 200px; /* Max width for date inputs */
+}
+
+.search-container button.search-button {
+  padding: 14px 30px;
+  border-radius: 8px; /* Slightly more rounded */
+  border: none;
+  background-color: var(--nuvia-blue);
+  color: var(--nuvia-white);
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-container button.search-button:hover {
+  background-color: #081c35; /* Darker blue */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.search-container button.clear-button {
+  padding: 14px 30px;
+  border-radius: 8px;
+  border: 1px solid var(--nuvia-blue); /* Blue border */
+  background-color: var(--nuvia-white);
+  color: var(--nuvia-blue);
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease, transform 0.2s ease;
+}
+
+.search-container button.clear-button:hover {
+  background-color: var(--nuvia-blue);
+  color: var(--nuvia-white);
+  transform: translateY(-2px);
+}
+
+.vehicles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5rem; /* Increased gap */
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.loading-message, .error-message {
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 3rem 2rem;
+  color: var(--nuvia-dark-gray);
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+  .search-container input[type="date"] {
+    max-width: 100%;
+  }
+  .vehicles-grid {
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+}

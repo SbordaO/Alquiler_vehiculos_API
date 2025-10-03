@@ -1,0 +1,108 @@
+.user-group {
+  margin-bottom: 40px;
+}
+
+.user-group-title {
+  font-size: 1.8rem;
+  color: var(--nuvia-blue);
+  border-bottom: 2px solid var(--nuvia-gold);
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.users-list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.user-card {
+  background-color: var(--nuvia-white);
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.user-card h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: var(--nuvia-blue);
+  margin-bottom: 0.5rem;
+}
+
+.user-card p {
+  margin: 8px 0;
+  color: var(--nuvia-dark-gray);
+  font-size: 0.95rem;
+  word-wrap: break-word;
+}
+
+.user-card .user-role {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--nuvia-white);
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.user-role.admin {
+  background-color: #16a085; /* Teal */
+}
+
+.user-role.user {
+  background-color: #2980b9; /* Belize Hole Blue */
+}
+
+.user-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.user-actions button,
+.make-admin-button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease, transform 0.2s ease;
+}
+
+.btn-modify-user {
+  background-color: var(--nuvia-gold); /* Gold */
+  color: var(--nuvia-white);
+}
+
+.btn-modify-user:hover {
+  background-color: #c29b2e;
+  transform: translateY(-2px);
+}
+
+.btn-delete-user {
+  background-color: var(--nuvia-error); /* Alizarin Red */
+  color: var(--nuvia-white);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.make-admin-button {
+  background-color: var(--nuvia-blue); /* Nuvia Blue */
+  color: var(--nuvia-white);
+}
+
+.make-admin-button:hover {
+  background-color: #081c35;
+  transform: translateY(-2px);
+}
