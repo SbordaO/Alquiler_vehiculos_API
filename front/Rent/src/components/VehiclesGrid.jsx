@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import VehicleCard from './VehicleCard';
-import './VehiclesGrid.css';
+import '../styles/VehiclesGrid.css';
 
 const VehiclesGrid = () => {
   const [vehicles, setVehicles] = useState([]);

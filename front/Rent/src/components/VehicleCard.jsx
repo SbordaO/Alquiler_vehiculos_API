@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './VehicleCard.css';
+import '../styles/VehicleCard.css';
 
 const VehicleCard = ({ vehicle }) => {
   // If vehicle.imagen is a full URL, use it directly.

@@ -1,0 +1,75 @@
+.reservations-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.reservation-list-item {
+  background-color: var(--nuvia-white);
+  border: 1px solid var(--nuvia-light-gray);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reservation-list-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.reservation-list-item h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: var(--nuvia-blue);
+  border-bottom: 2px solid var(--nuvia-gold);
+  padding-bottom: 10px;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.reservation-list-item p {
+  margin: 0.8rem 0;
+  line-height: 1.5;
+  color: var(--nuvia-dark-gray);
+  font-size: 0.95rem;
+}
+
+.reservation-list-item p strong {
+  color: var(--nuvia-blue);
+}
+
+.reservation-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.reservation-actions button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease, transform 0.2s ease;
+}
+
+.btn-modify {
+  background-color: var(--nuvia-gold);
+  color: var(--nuvia-white);
+}
+
+.btn-modify:hover {
+  background-color: #c29b2e;
+  transform: translateY(-2px);
+}
+
+.btn-delete {
+  background-color: var(--nuvia-error);
+  color: var(--nuvia-white);
+}
+
+.btn-delete:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import Calendar from 'react-calendar';
-import './Calendar.css';
+import '../styles/Calendar.css';
 
 const CustomCalendar = ({ reservations, onDateChange, selectedRange }) => {
 

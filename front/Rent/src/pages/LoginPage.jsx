@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext'; // Importar useAuth
-import '../components/Form.css';
+import '../styles/Form.css';
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({

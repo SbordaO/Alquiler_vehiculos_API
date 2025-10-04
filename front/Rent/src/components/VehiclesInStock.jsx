@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../components/Form.css'; // Reutilizamos los estilos de formulario
+import '../styles/Form.css'; // Reutilizamos los estilos de formulario
 
 const VehiclesInStock = ({ onVehicleAction }) => {
   const [vehicles, setVehicles] = useState([]);

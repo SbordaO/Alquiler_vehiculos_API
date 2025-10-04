@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import './AdminPage.css'; // Estilos específicos para la página de admin
+import '../styles/AdminPage.css'; // Estilos específicos para la página de admin
 import VehiclesInStock from '../components/VehiclesInStock';
 import ReservedVehicles from '../components/ReservedVehicles';
 import AddNewVehicle from '../components/AddNewVehicle';

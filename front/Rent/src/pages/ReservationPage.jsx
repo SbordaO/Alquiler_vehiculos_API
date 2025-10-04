@@ -3,8 +3,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
 import CustomCalendar from '../components/Calendar'; // Import the calendar
-import '../components/Form.css';
-import './ReservationPage.css';
+import '../styles/Form.css';
+import '../styles/ReservationPage.css';
 
 const ReservationPage = () => {
   const { vehicleId } = useParams();

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios'; // Para realizar peticiones HTTP
-import './Form.css'; // Estilos generales para formularios
-import './AddNewVehicle.css'; // Estilos específicos para este componente
+import '../styles/Form.css'; // Estilos generales para formularios
+import '../styles/AddNewVehicle.css'; // Estilos específicos para este componente
 
 // Componente para agregar un nuevo vehículo
 const AddNewVehicle = ({ onVehicleAdded }) => {

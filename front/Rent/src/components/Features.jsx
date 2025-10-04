@@ -1,5 +1,5 @@
 import React from 'react';
-import './Features.css';
+import '../styles/Features.css';
 
 // Simple SVG Icon Components
 const CarIcon = () => (

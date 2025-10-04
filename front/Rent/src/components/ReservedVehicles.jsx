@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './ReservedVehicles.css'; // Import the new CSS file
+import '../styles/ReservedVehicles.css'; // Import the new CSS file
 
 const ReservedVehicles = () => {
   const [reservations, setReservations] = useState([]);

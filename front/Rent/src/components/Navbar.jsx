@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link'; // Import HashLink
 import { useAuth } from '../context/AuthContext';
-import './Navbar.css';
+import '../styles/Navbar.css';
 
 const Navbar = () => {
   const { user, logout } = useAuth();

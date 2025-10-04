@@ -117,29 +117,3 @@ exports.listByUser = async (req, res) => {
     res.status(500).json({ ok: false, msg: 'Error interno al obtener reservas por usuario' }); // Manejo de errores del servidor
   }
 };
-"cancelada" WHERE id = ?', [req.params.id]);
-    res.json({ ok: true });
-  } catch (err) {
-    res.status(500).json({ ok: false, msg: 'Error interno' });
-  }
-};
-
-exports.listByUser = async (req, res) => {
-  try {
-    const { userId } = req.params;
-    const [reservations] = await pool.query(
-      `SELECT r.id, r.desde, r.hasta, r.total, r.estado,
-              v.marca AS vehicle_marca, v.modelo AS vehicle_modelo, v.anio AS vehicle_anio,
-              u.nombre AS user_nombre, u.email AS user_email
-       FROM reservations r
-       JOIN vehicles v ON r.vehicleId = v.id
-       JOIN users u ON r.userId = u.id
-       WHERE r.userId = ?`,
-      [userId]
-    );
-    res.json({ ok: true, reservations });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ ok: false, msg: 'Error interno al obtener reservas por usuario' });
-  }
-};

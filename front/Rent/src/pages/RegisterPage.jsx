@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import '../components/Form.css';
+import '../styles/Form.css';
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
