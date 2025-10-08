@@ -19,6 +19,7 @@ CREATE TABLE vehicles (
   patente VARCHAR(20) UNIQUE,
   precio_por_dia DECIMAL(10,2),
   disponible BOOLEAN DEFAULT TRUE,
+  imagen VARCHAR(255),
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
