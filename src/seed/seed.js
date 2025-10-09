@@ -35,6 +35,7 @@ const bcrypt = require('bcrypt');
         patente VARCHAR(20) UNIQUE,
         precioPorDia DECIMAL(10,2),
         disponible BOOLEAN DEFAULT TRUE,
+        imagen VARCHAR(255),
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
       )
     `);
@@ -64,9 +65,11 @@ const bcrypt = require('bcrypt');
     await pool.query('INSERT INTO users (nombre, email, password, rol) VALUES (?,?,?,?)', ['Sebas', 'sebas@ejemplo.com', passUser, 'cliente']);
 
     // Inserta vehículos de prueba
-    await pool.query('INSERT INTO vehicles (marca, modelo, anio, patente, precioPorDia) VALUES (?,?,?,?,?)', ['Toyota', 'Etios', 2018, 'ABC123', 30.00]);
-    await pool.query('INSERT INTO vehicles (marca, modelo, anio, patente, precioPorDia) VALUES (?,?,?,?,?)', ['VW', 'Gol', 2017, 'DEF456', 25.00]);
-    await pool.query('INSERT INTO vehicles (marca, modelo, anio, patente, precioPorDia) VALUES (?,?,?,?,?)', ['Ford', 'Ka', 2019, 'GHI789', 28.50]);
+    await pool.query('INSERT INTO vehicles (marca, modelo, anio, patente, precioPorDia, imagen) VALUES (?,?,?,?,?,?)', ['Toyota', 'Etios', 2018, 'ABC123', 30.00, 'toyota-etios.jpg']);
+    await pool.query('INSERT INTO vehicles (marca, modelo, anio, patente, precioPorDia, imagen) VALUES (?,?,?,?,?,?)', ['Toyota', 'Hilux', 2020, 'DEF456', 50.00, 'toyota-hilux.jpeg']);
+    await pool.query('INSERT INTO vehicles (marca, modelo, anio, patente, precioPorDia, imagen) VALUES (?,?,?,?,?,?)', ['Chevrolet', 'Cruze', 2019, 'GHI789', 40.00, 'image-1759342822871-475272408.png']);
+    await pool.query('INSERT INTO vehicles (marca, modelo, anio, patente, precioPorDia, imagen) VALUES (?,?,?,?,?,?)', ['Ford', 'Mustang', 2021, 'JKL012', 70.00, 'image-1759343160698-842650352.jpg']);
+    await pool.query('INSERT INTO vehicles (marca, modelo, anio, patente, precioPorDia, imagen) VALUES (?,?,?,?,?,?)', ['Nissan', 'Versa', 2019, 'MNO345', 35.00, 'image-1759343355540-562920003.png']);
 
     console.log('Seed completado ✅'); // Mensaje de éxito
     process.exit(0); // Termina el proceso con éxito
