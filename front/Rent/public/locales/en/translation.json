@@ -1,0 +1,167 @@
+{
+  "navbar": {
+    "home": "Home",
+    "login": "Login",
+    "register": "Register",
+    "admin": "Admin",
+    "my_reservations": "My Reservations",
+    "logout": "Logout"
+  },
+  "hero": {
+    "title": "Your Journey Starts Here",
+    "slogan": "Choose your car, enjoy the ride"
+  },
+  "features": {
+    "fleet": {
+      "title": "Wide Fleet",
+      "text": "Modern and varied vehicles for every type of trip."
+    },
+    "booking": {
+      "title": "Easy and Fast Booking",
+      "text": "Rent your car in minutes with our intuitive system."
+    },
+    "safety": {
+      "title": "Safe and Reliable",
+      "text": "All our vehicles have insurance and up-to-date maintenance."
+    }
+  },
+  "vehicleCarousel": {
+    "loading": "Loading vehicle showcase...",
+    "load_error": "Could not load vehicles for the showcase.",
+    "no_vehicles": "No vehicles available to display.",
+    "title": "Our Featured Fleet",
+    "price_per_day": "${{price}} / day"
+  },
+  "vehiclesGrid": {
+    "load_error": "Could not load vehicles. Please try again later.",
+    "search_button": "Search Vehicle",
+    "clear_button": "Clear Filters",
+    "loading": "Loading vehicles...",
+    "no_vehicles": "No vehicles available for the selected date range."
+  },
+  "footer": {
+    "contact_us": "Contact Us",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "rights_reserved": "All rights reserved."
+  },
+  "loginPage": {
+    "title": "Login",
+    "email_label": "Email",
+    "email_placeholder": "your@email.com",
+    "password_label": "Password",
+    "loading_button": "Logging in...",
+    "login_button": "Login",
+    "no_account": "Don't have an account?",
+    "register_link": "Register",
+    "error_credentials_required": "Email and password are required.",
+    "login_success": "Login successful!",
+    "login_error": "Error logging in."
+  },
+  "registerPage": {
+    "title": "Create Account",
+    "name_label": "Name",
+    "name_placeholder": "Your Name",
+    "email_label": "Email",
+    "email_placeholder": "your@email.com",
+    "password_label": "Password",
+    "confirm_password_label": "Confirm Password",
+    "loading_button": "Registering...",
+    "register_button": "Register",
+    "already_account": "Already have an account?",
+    "login_link": "Login",
+    "error_password_mismatch": "Passwords do not match.",
+    "error_all_fields_required": "All fields are required.",
+    "register_success": "Registration successful. Please log in.",
+    "register_error": "Error registering user."
+  },
+  "userReservationsPage": {
+    "title": "My Reservations",
+    "loading": "Loading your reservations...",
+    "load_error": "Error loading your reservations.",
+    "no_reservations": "You have no active reservations.",
+    "explore_button": "Explore Vehicles",
+    "reservation_id": "Reservation ID: {{id}}",
+    "vehicle": "Vehicle",
+    "from": "From",
+    "to": "To",
+    "total_cost": "Total Cost",
+    "status": "Status",
+    "modify_button": "Modify",
+    "cancel_button": "Cancel",
+    "cancel_confirm": "Are you sure you want to cancel this reservation?",
+    "cancel_error": "Error canceling reservation.",
+    "modify_info": "The modify functionality is not yet implemented."
+  },
+  "adminPage": {
+    "title": "Admin Panel",
+    "tabs": {
+      "vehicles_in_stock": "Vehicles in Stock",
+      "reserved_vehicles": "Reserved Vehicles",
+      "add_new_vehicle": "Add New Vehicle",
+      "registered_users": "Registered Users"
+    }
+  },
+  "vehiclesInStock": {
+    "title": "Existing Vehicles",
+    "loading": "Loading vehicles...",
+    "load_error": "Error loading vehicles.",
+    "no_vehicles": "No vehicles to display.",
+    "plate": "Plate",
+    "price": "Price",
+    "delete_button": "Delete",
+    "delete_confirm": "Are you sure you want to delete this vehicle?",
+    "delete_success": "Vehicle deleted successfully!",
+    "delete_error": "Error deleting vehicle."
+  },
+  "reservedVehicles": {
+    "title": "Reserved Vehicles",
+    "loading": "Loading reservations...",
+    "load_error": "Error loading reservations.",
+    "no_reservations": "No reserved vehicles to display.",
+    "reservation_id": "Reservation ID: {{id}}",
+    "vehicle": "Vehicle",
+    "user": "User",
+    "from": "From",
+    "to": "To",
+    "total_cost": "Total Cost",
+    "status": "Status",
+    "modify_button": "Modify",
+    "cancel_button": "Cancel",
+    "cancel_confirm": "Are you sure you want to cancel this reservation?",
+    "cancel_error": "Error canceling reservation.",
+    "modify_info": "The modify functionality is not yet implemented."
+  },
+  "addNewVehicle": {
+    "title": "Add New Vehicle",
+    "brand_label": "Brand",
+    "model_label": "Model",
+    "year_label": "Year",
+    "plate_label": "Plate",
+    "price_per_day_label": "Price per Day",
+    "image_label": "Vehicle Image",
+    "use_url_button": "Use URL",
+    "upload_file_button": "Upload File",
+    "loading_button": "Adding...",
+    "add_button": "Add Vehicle",
+    "upload_error": "Error uploading image. Check file type and size.",
+    "add_success": "Vehicle added successfully!",
+    "add_error": "Error adding vehicle."
+  },
+  "registeredUsers": {
+    "title": "Registered Users",
+    "loading": "Loading users...",
+    "load_error": "Error loading users.",
+    "no_users": "No registered users to display.",
+    "admins_title": "Administrators",
+    "clients_title": "Clients",
+    "modify_button": "Modify",
+    "delete_button": "Delete",
+    "delete_button_title": "Functionality not available",
+    "make_admin_button": "Make Admin",
+    "make_admin_info": "Functionality not implemented: Make user {{userId}} an admin",
+    "modify_user_info": "Functionality not implemented: Modify user {{userId}}",
+    "delete_user_info": "Functionality not implemented: Delete user {{userId}}"
+  }
+}

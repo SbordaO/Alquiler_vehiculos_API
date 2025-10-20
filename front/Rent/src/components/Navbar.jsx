@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link'; // Import HashLink
 import { useAuth } from '../context/AuthContext';
+import { useTranslation } from 'react-i18next';
 import '../styles/Navbar.css';
 
 const Navbar = () => {
   const { user, logout } = useAuth();
+  const { t, i18n } = useTranslation();
+  const [langDropdown, setLangDropdown] = useState(false);
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    setLangDropdown(false);
+  };
 
   return (
     <nav className="navbar">
@@ -17,7 +25,7 @@ const Navbar = () => {
         <ul className="nav-menu">
           <li className="nav-item">
             <HashLink to="/#hero-section" className="nav-links" smooth>
-              Inicio
+              {t('navbar.home')}
             </HashLink>
           </li>
           <li className="nav-item">
@@ -33,7 +41,7 @@ const Navbar = () => {
           {user && (
             <li className="nav-item">
               <NavLink to="/reservas" className="nav-links">
-                Mis Reservas
+                {t('navbar.my_reservations')}
               </NavLink>
             </li>
           )}
@@ -41,29 +49,42 @@ const Navbar = () => {
           {user && user.role === 'admin' && (
             <li className="nav-item">
               <NavLink to="/admin" className="nav-links">
-                Gestión
+                {t('navbar.admin')}
               </NavLink>
             </li>
           )}
         </ul>
 
         <ul className="nav-menu nav-menu-right">
+          <li className="nav-item">
+            <div className="language-switcher">
+              <button onClick={() => setLangDropdown(!langDropdown)} className="nav-button">
+                {i18n.language.toUpperCase()}
+              </button>
+              {langDropdown && (
+                <div className="language-dropdown">
+                  <button onClick={() => changeLanguage('es')} className="nav-button">ES</button>
+                  <button onClick={() => changeLanguage('en')} className="nav-button">EN</button>
+                </div>
+              )}
+            </div>
+          </li>
           {user ? (
             <li className="nav-item">
               <button onClick={logout} className="nav-button logout">
-                Logout
+                {t('navbar.logout')}
               </button>
             </li>
           ) : (
             <>
               <li className="nav-item">
                 <NavLink to="/login" className="nav-links">
-                  Login
+                  {t('navbar.login')}
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink to="/register" className="nav-button primary">
-                  Registrarse
+                  {t('navbar.register')}
                 </NavLink>
               </li>
             </>

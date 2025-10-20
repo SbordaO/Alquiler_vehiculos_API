@@ -1,0 +1,167 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "login": "Iniciar Sesión",
+    "register": "Registrarse",
+    "admin": "Administración",
+    "my_reservations": "Mis Reservas",
+    "logout": "Cerrar Sesión"
+  },
+  "hero": {
+    "title": "Tu Viaje Comienza Aquí",
+    "slogan": "Elegí tu auto, disfrutá el camino"
+  },
+  "features": {
+    "fleet": {
+      "title": "Amplia Flota",
+      "text": "Vehículos modernos y variados para cada tipo de viaje."
+    },
+    "booking": {
+      "title": "Reserva Fácil y Rápido",
+      "text": "Alquilá tu auto en minutos con nuestro sistema intuitivo."
+    },
+    "safety": {
+      "title": "Seguro y Confiable",
+      "text": "Todos nuestros vehículos cuentan con seguro y mantenimiento al día."
+    }
+  },
+  "vehicleCarousel": {
+    "loading": "Cargando exhibición de vehículos...",
+    "load_error": "No se pudieron cargar los vehículos para la exhibición.",
+    "no_vehicles": "No hay vehículos disponibles para exhibir.",
+    "title": "Nuestra Flota Destacada",
+    "price_per_day": "${{price}} / día"
+  },
+  "vehiclesGrid": {
+    "load_error": "No se pudieron cargar los vehículos. Inténtalo de nuevo más tarde.",
+    "search_button": "Buscar Vehículo",
+    "clear_button": "Limpiar Filtros",
+    "loading": "Cargando vehículos...",
+    "no_vehicles": "No hay vehículos disponibles para el rango de fechas seleccionado."
+  },
+  "footer": {
+    "contact_us": "Contáctanos",
+    "email": "Email",
+    "phone": "Teléfono",
+    "address": "Dirección",
+    "rights_reserved": "Todos los derechos reservados."
+  },
+  "loginPage": {
+    "title": "Iniciar Sesión",
+    "email_label": "Email",
+    "email_placeholder": "tu@email.com",
+    "password_label": "Contraseña",
+    "loading_button": "Iniciando sesión...",
+    "login_button": "Login",
+    "no_account": "¿No tienes una cuenta?",
+    "register_link": "Regístrate",
+    "error_credentials_required": "Email y contraseña son obligatorios.",
+    "login_success": "Inicio de sesión exitoso!",
+    "login_error": "Error al iniciar sesión."
+  },
+  "registerPage": {
+    "title": "Crear Cuenta",
+    "name_label": "Nombre",
+    "name_placeholder": "Tu Nombre",
+    "email_label": "Email",
+    "email_placeholder": "tu@email.com",
+    "password_label": "Contraseña",
+    "confirm_password_label": "Confirmar Contraseña",
+    "loading_button": "Registrando...",
+    "register_button": "Registrarse",
+    "already_account": "¿Ya tienes una cuenta?",
+    "login_link": "Inicia sesión",
+    "error_password_mismatch": "Las contraseñas no coinciden.",
+    "error_all_fields_required": "Todos los campos son obligatorios.",
+    "register_success": "Registro exitoso. Por favor, inicia sesión.",
+    "register_error": "Error al registrar el usuario."
+  },
+  "userReservationsPage": {
+    "title": "Mis Reservas",
+    "loading": "Cargando tus reservas...",
+    "load_error": "Error al cargar tus reservas.",
+    "no_reservations": "No tienes ninguna reserva activa.",
+    "explore_button": "Explorar Vehículos",
+    "reservation_id": "Reserva ID: {{id}}",
+    "vehicle": "Vehículo",
+    "from": "Desde",
+    "to": "Hasta",
+    "total_cost": "Costo Total",
+    "status": "Estado",
+    "modify_button": "Modificar",
+    "cancel_button": "Cancelar",
+    "cancel_confirm": "¿Estás seguro de que quieres cancelar esta reserva?",
+    "cancel_error": "Error al cancelar la reserva.",
+    "modify_info": "La funcionalidad de modificar aún no está implementada."
+  },
+  "adminPage": {
+    "title": "Panel de Administración",
+    "tabs": {
+      "vehicles_in_stock": "Vehículos en Stock",
+      "reserved_vehicles": "Vehículos Reservados",
+      "add_new_vehicle": "Agregar Nuevo Vehículo",
+      "registered_users": "Usuarios Registrados"
+    }
+  },
+  "vehiclesInStock": {
+    "title": "Vehículos Existentes",
+    "loading": "Cargando vehículos...",
+    "load_error": "Error al cargar los vehículos.",
+    "no_vehicles": "No hay vehículos para mostrar.",
+    "plate": "Patente",
+    "price": "Precio",
+    "delete_button": "Eliminar",
+    "delete_confirm": "¿Estás seguro de que quieres eliminar este vehículo?",
+    "delete_success": "¡Vehículo eliminado exitosamente!",
+    "delete_error": "Error al eliminar el vehículo."
+  },
+  "reservedVehicles": {
+    "title": "Vehículos Reservados",
+    "loading": "Cargando reservas...",
+    "load_error": "Error al cargar las reservas.",
+    "no_reservations": "No hay vehículos reservados para mostrar.",
+    "reservation_id": "Reserva ID: {{id}}",
+    "vehicle": "Vehículo",
+    "user": "Usuario",
+    "from": "Desde",
+    "to": "Hasta",
+    "total_cost": "Costo Total",
+    "status": "Estado",
+    "modify_button": "Modificar",
+    "cancel_button": "Cancelar",
+    "cancel_confirm": "¿Estás seguro de que quieres cancelar esta reserva?",
+    "cancel_error": "Error al cancelar la reserva.",
+    "modify_info": "La funcionalidad de modificar aún no está implementada."
+  },
+  "addNewVehicle": {
+    "title": "Agregar Nuevo Vehículo",
+    "brand_label": "Marca",
+    "model_label": "Modelo",
+    "year_label": "Año",
+    "plate_label": "Patente",
+    "price_per_day_label": "Precio por Día",
+    "image_label": "Imagen del Vehículo",
+    "use_url_button": "Usar URL",
+    "upload_file_button": "Subir Archivo",
+    "loading_button": "Agregando...",
+    "add_button": "Agregar Vehículo",
+    "upload_error": "Error al subir la imagen. Verifique el tipo y tamaño del archivo.",
+    "add_success": "¡Vehículo agregado exitosamente!",
+    "add_error": "Error al agregar el vehículo."
+  },
+  "registeredUsers": {
+    "title": "Usuarios Registrados",
+    "loading": "Cargando usuarios...",
+    "load_error": "Error al cargar los usuarios.",
+    "no_users": "No hay usuarios registrados para mostrar.",
+    "admins_title": "Administradores",
+    "clients_title": "Clientes",
+    "modify_button": "Modificar",
+    "delete_button": "Eliminar",
+    "delete_button_title": "Funcionalidad no disponible",
+    "make_admin_button": "Hacer Administrador",
+    "make_admin_info": "Funcionalidad no implementada: Hacer admin al usuario {{userId}}",
+    "modify_user_info": "Funcionalidad no implementada: Modificar usuario {{userId}}",
+    "delete_user_info": "Funcionalidad no implementada: Eliminar usuario {{userId}}"
+  }
+}

@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+import { useTranslation } from 'react-i18next';
+>>>>>>> aec402f (opciones de lenguaje)
 import '../styles/Features.css';
 
 // Simple SVG Icon Components
@@ -23,11 +27,17 @@ const FeatureCard = ({ icon, title, text }) => (
 );
 
 const Features = () => {
+<<<<<<< HEAD
+=======
+  const { t } = useTranslation();
+
+>>>>>>> aec402f (opciones de lenguaje)
   return (
     <section className="features-section">
       <div className="features-container">
         <FeatureCard 
           icon={<CarIcon />}
+<<<<<<< HEAD
           title="Amplia Flota"
           text="Vehículos modernos y variados para cada tipo de viaje."
         />
@@ -40,6 +50,20 @@ const Features = () => {
           icon={<ShieldIcon />}
           title="Seguro y Confiable"
           text="Todos nuestros vehículos cuentan con seguro y mantenimiento al día."
+=======
+          title={t('features.fleet.title')}
+          text={t('features.fleet.text')}
+        />
+        <FeatureCard 
+          icon={<CalendarIcon />}
+          title={t('features.booking.title')}
+          text={t('features.booking.text')}
+        />
+        <FeatureCard 
+          icon={<ShieldIcon />}
+          title={t('features.safety.title')}
+          text={t('features.safety.text')}
+>>>>>>> aec402f (opciones de lenguaje)
         />
       </div>
     </section>

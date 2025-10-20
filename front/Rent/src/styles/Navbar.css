@@ -110,3 +110,58 @@
 .nav-button.logout:hover {
   color: var(--nuvia-gold);
 }
+<<<<<<< HEAD
+=======
+
+.language-switcher {
+  position: relative;
+  margin-left: 1rem; /* Add some space from other nav items */
+}
+
+.language-switcher > .nav-button {
+  /* Style for the main language toggle button */
+  background-color: var(--nuvia-blue);
+  color: var(--nuvia-white);
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.language-switcher > .nav-button:hover {
+  background-color: #081c35; /* Darker blue on hover */
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 110%; /* Position below the button */
+  right: 0;
+  background-color: var(--nuvia-white);
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 80px;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.language-dropdown .nav-button {
+  /* Style for language options inside the dropdown */
+  background-color: transparent;
+  color: var(--nuvia-dark-gray);
+  border: none;
+  padding: 8px 15px;
+  text-align: left;
+  width: 100%;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.language-dropdown .nav-button:hover {
+  background-color: var(--nuvia-light-gray); /* Light background on hover */
+  color: var(--nuvia-blue);
+}
+>>>>>>> aec402f (opciones de lenguaje)

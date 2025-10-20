@@ -1,4 +1,9 @@
 import { Routes, Route } from 'react-router-dom'; // Importa componentes para definir rutas en la aplicación
+<<<<<<< HEAD
+=======
+import { ToastContainer } from 'react-toastify'; // Importa el contenedor de notificaciones
+import 'react-toastify/dist/ReactToastify.css'; // Importa los estilos de react-toastify
+>>>>>>> aec402f (opciones de lenguaje)
 import Navbar from './components/Navbar'; // Componente de la barra de navegación
 import Footer from './components/Footer'; // Componente del pie de página
 import HomePage from './pages/HomePage'; // Página de inicio
@@ -44,6 +49,11 @@ function App() {
       </main>
       {/* Pie de página visible en todas las páginas */}
       <Footer />
+<<<<<<< HEAD
+=======
+      {/* Contenedeor de Toast Notifications */}
+      <ToastContainer />
+>>>>>>> aec402f (opciones de lenguaje)
     </>
   );
 }
