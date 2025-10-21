@@ -1,10 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 import { useTranslation } from 'react-i18next';
->>>>>>> aec402f (opciones de lenguaje)
 import '../styles/VehicleCarousel.css';
 
 // Helper function to shuffle an array (Fisher-Yates algorithm)
@@ -17,10 +14,7 @@ const shuffleArray = (array) => {
 };
 
 const VehicleCarousel = () => {
-<<<<<<< HEAD
-=======
   const { t } = useTranslation();
->>>>>>> aec402f (opciones de lenguaje)
   const [vehicles, setVehicles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -42,23 +36,15 @@ const VehicleCarousel = () => {
           setVehicles([]);
         }
       } catch (err) {
-<<<<<<< HEAD
-        setError('No se pudieron cargar los vehículos para la exhibición.');
-=======
         setError(t('vehicleCarousel.load_error'));
->>>>>>> aec402f (opciones de lenguaje)
         console.error(err);
       } finally {
         setLoading(false);
       }
     };
-
     fetchVehicles();
-<<<<<<< HEAD
   }, []);
-=======
-  }, [t]);
->>>>>>> aec402f (opciones de lenguaje)
+
 
   useEffect(() => {
     if (!loading && vehicles.length > 0) {
@@ -93,15 +79,6 @@ const VehicleCarousel = () => {
     }
   };
 
-<<<<<<< HEAD
-  if (loading) return <p className="carousel-message">Cargando exhibición de vehículos...</p>;
-  if (error) return <p className="carousel-message error">{error}</p>;
-  if (vehicles.length === 0) return <p className="carousel-message">No hay vehículos disponibles para exhibir.</p>;
-
-  return (
-    <section className="vehicle-carousel-section">
-      <h2 className="carousel-section-title">Nuestra Flota Destacada</h2>
-=======
   if (loading) return <p className="carousel-message">{t('vehicleCarousel.loading')}</p>;
   if (error) return <p className="carousel-message error">{error}</p>;
   if (vehicles.length === 0) return <p className="carousel-message">{t('vehicleCarousel.no_vehicles')}</p>;
@@ -109,7 +86,6 @@ const VehicleCarousel = () => {
   return (
     <section className="vehicle-carousel-section">
       <h2 className="carousel-section-title">{t('vehicleCarousel.title')}</h2>
->>>>>>> aec402f (opciones de lenguaje)
       <div 
         className="vehicle-carousel-container"
         ref={carouselRef}
@@ -127,11 +103,7 @@ const VehicleCarousel = () => {
                 <img src={imageUrl} alt={`${vehicle.marca} ${vehicle.modelo}`} className="carousel-item-image" onError={(e) => { e.target.onerror = null; e.target.src='/images/default-car.png' }} />
                 <div className="carousel-item-info">
                   <h3>{vehicle.marca} {vehicle.modelo}</h3>
-<<<<<<< HEAD
-                  <p>${vehicle.precioPorDia} / día</p>
-=======
                   <p>{t('vehicleCarousel.price_per_day', { price: vehicle.precioPorDia })}</p>
->>>>>>> aec402f (opciones de lenguaje)
                 </div>
               </div>
             </Link>

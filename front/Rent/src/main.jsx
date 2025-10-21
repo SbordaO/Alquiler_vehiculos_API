@@ -4,10 +4,11 @@ import { BrowserRouter } from 'react-router-dom'; // Importa BrowserRouter para 
 import { AuthProvider } from './context/AuthContext'; // Importa el proveedor de autenticación
 import App from './App'; // Importa el componente principal de la aplicación
 import './styles/index.css'; // Importa los estilos CSS globales
-<<<<<<< HEAD
-=======
+import { ToastContainer } from 'react-toastify'; // Importa ToastContainer
+import 'react-toastify/dist/ReactToastify.css'; // Importa los estilos CSS de react-toastify
+
 import './i18n'; // Importa la configuración de i18next
->>>>>>> aec402f (opciones de lenguaje)
+
 
 // Renderiza la aplicación React en el elemento HTML con id 'root'
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -19,6 +20,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <AuthProvider>
         {/* El componente principal de la aplicación */}
         <App />
+        <ToastContainer /> {/* Agrega ToastContainer aquí */}
       </AuthProvider>
     </BrowserRouter>
   </React.StrictMode>

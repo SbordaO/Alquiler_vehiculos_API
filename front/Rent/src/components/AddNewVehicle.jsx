@@ -1,19 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios'; // Para realizar peticiones HTTP
-<<<<<<< HEAD
-=======
 import { useTranslation } from 'react-i18next';
->>>>>>> aec402f (opciones de lenguaje)
 import '../styles/Form.css'; // Estilos generales para formularios
 import '../styles/AddNewVehicle.css'; // Estilos específicos para este componente
 
 // Componente para agregar un nuevo vehículo
-const AddNewVehicle = ({ onVehicleAdded }) => {
-<<<<<<< HEAD
-=======
-  const { t } = useTranslation();
->>>>>>> aec402f (opciones de lenguaje)
-  // Estado para los datos del formulario del vehículo
+  const AddNewVehicle = ({ onVehicleAdded }) => {
+  const { t } = useTranslation();  // Estado para los datos del formulario del vehículo
   const [formData, setFormData] = useState({
     marca: '',
     modelo: '',
@@ -63,11 +56,7 @@ const AddNewVehicle = ({ onVehicleAdded }) => {
         });
         finalImagen = res.data.fileName; // El backend devuelve el nombre del archivo guardado
       } catch (err) {
-<<<<<<< HEAD
-        setError('Error al subir la imagen. Verifique el tipo y tamaño del archivo.');
-=======
         setError(t('addNewVehicle.upload_error'));
->>>>>>> aec402f (opciones de lenguaje)
         setLoading(false);
         return;
       }
@@ -85,11 +74,7 @@ const AddNewVehicle = ({ onVehicleAdded }) => {
       // Envía los datos del vehículo al endpoint de creación de vehículos del backend
       await axios.post('http://localhost:3000/vehiculos', vehicleData, config);
       
-<<<<<<< HEAD
-      setSuccessMessage('¡Vehículo agregado exitosamente!');
-=======
       setSuccessMessage(t('addNewVehicle.add_success'));
->>>>>>> aec402f (opciones de lenguaje)
       // Reinicia el formulario
       setFormData({ marca: '', modelo: '', anio: '', patente: '', precioPorDia: '', imagen: '' });
       setImageFile(null);
@@ -98,11 +83,7 @@ const AddNewVehicle = ({ onVehicleAdded }) => {
         onVehicleAdded();
       }
     } catch (err) {
-<<<<<<< HEAD
-      setError(err.response?.data?.msg || 'Error al agregar el vehículo.');
-=======
       setError(err.response?.data?.msg || t('addNewVehicle.add_error'));
->>>>>>> aec402f (opciones de lenguaje)
     } finally {
       setLoading(false);
     }
@@ -110,11 +91,7 @@ const AddNewVehicle = ({ onVehicleAdded }) => {
 
   return (
     <div className="admin-section">
-<<<<<<< HEAD
-      <h2 className="admin-section-title">Agregar Nuevo Vehículo</h2>
-=======
       <h2 className="admin-section-title">{t('addNewVehicle.title')}</h2>
->>>>>>> aec402f (opciones de lenguaje)
       <form onSubmit={handleAddVehicle} className="admin-form-card">
         {/* Muestra mensajes de error o éxito */}
         {error && <p className="error-message">{error}</p>}
@@ -122,25 +99,6 @@ const AddNewVehicle = ({ onVehicleAdded }) => {
         
         {/* Campos del formulario para los datos del vehículo */}
         <div className="form-group">
-<<<<<<< HEAD
-          <label className="form-label" htmlFor="marca">Marca</label>
-          <input className="form-input" type="text" id="marca" value={formData.marca} onChange={handleChange} required />
-        </div>
-        <div className="form-group">
-          <label className="form-label" htmlFor="modelo">Modelo</label>
-          <input className="form-input" type="text" id="modelo" value={formData.modelo} onChange={handleChange} required />
-        </div>
-        <div className="form-group">
-          <label className="form-label" htmlFor="anio">Año</label>
-          <input className="form-input" type="number" id="anio" value={formData.anio} onChange={handleChange} required />
-        </div>
-        <div className="form-group">
-          <label className="form-label" htmlFor="patente">Patente</label>
-          <input className="form-input" type="text" id="patente" value={formData.patente} onChange={handleChange} required />
-        </div>
-        <div className="form-group">
-          <label className="form-label" htmlFor="precioPorDia">Precio por Día</label>
-=======
           <label className="form-label" htmlFor="marca">{t('addNewVehicle.brand_label')}</label>
           <input className="form-input" type="text" id="marca" value={formData.marca} onChange={handleChange} required />
         </div>
@@ -158,25 +116,16 @@ const AddNewVehicle = ({ onVehicleAdded }) => {
         </div>
         <div className="form-group">
           <label className="form-label" htmlFor="precioPorDia">{t('addNewVehicle.price_per_day_label')}</label>
->>>>>>> aec402f (opciones de lenguaje)
           <input className="form-input" type="number" id="precioPorDia" value={formData.precioPorDia} onChange={handleChange} required />
         </div>
 
         {/* Sección de subida de imagen */}
         <div className="form-group">
-<<<<<<< HEAD
-          <label className="form-label">Imagen del Vehículo</label>
-          <div className="upload-tabs">
-            {/* Botones para seleccionar tipo de subida (URL o archivo) */}
-            <button type="button" className={`tab-button ${uploadType === 'url' ? 'active' : ''}`} onClick={() => setUploadType('url')}>Usar URL</button>
-            <button type="button" className={`tab-button ${uploadType === 'upload' ? 'active' : ''}`} onClick={() => setUploadType('upload')}>Subir Archivo</button>
-=======
           <label className="form-label">{t('addNewVehicle.image_label')}</label>
           <div className="upload-tabs">
             {/* Botones para seleccionar tipo de subida (URL o archivo) */}
             <button type="button" className={`tab-button ${uploadType === 'url' ? 'active' : ''}`} onClick={() => setUploadType('url')}>{t('addNewVehicle.use_url_button')}</button>
             <button type="button" className={`tab-button ${uploadType === 'upload' ? 'active' : ''}`} onClick={() => setUploadType('upload')}>{t('addNewVehicle.upload_file_button')}</button>
->>>>>>> aec402f (opciones de lenguaje)
           </div>
 
           {/* Campo de entrada de imagen según el tipo de subida seleccionado */}
@@ -189,11 +138,8 @@ const AddNewVehicle = ({ onVehicleAdded }) => {
 
         {/* Botón de envío del formulario */}
         <button className="form-button" type="submit" disabled={loading}>
-<<<<<<< HEAD
-          {loading ? 'Agregando...' : 'Agregar Vehículo'}
-=======
           {loading ? t('addNewVehicle.loading_button') : t('addNewVehicle.add_button')}
->>>>>>> aec402f (opciones de lenguaje)
+        </button>
         </button>
       </form>
     </div>

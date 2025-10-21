@@ -110,8 +110,6 @@
 .nav-button.logout:hover {
   color: var(--nuvia-gold);
 }
-<<<<<<< HEAD
-=======
 
 .language-switcher {
   position: relative;
@@ -164,4 +162,3 @@
   background-color: var(--nuvia-light-gray); /* Light background on hover */
   color: var(--nuvia-blue);
 }
->>>>>>> aec402f (opciones de lenguaje)

@@ -1,8 +1,5 @@
 import React, { useState, useCallback } from 'react';
-<<<<<<< HEAD
-=======
 import { useTranslation } from 'react-i18next';
->>>>>>> aec402f (opciones de lenguaje)
 import '../styles/AdminPage.css'; // Estilos específicos para la página de admin
 import VehiclesInStock from '../components/VehiclesInStock';
 import ReservedVehicles from '../components/ReservedVehicles';
@@ -10,10 +7,7 @@ import AddNewVehicle from '../components/AddNewVehicle';
 import RegisteredUsers from '../components/RegisteredUsers';
 
 const AdminPage = () => {
-<<<<<<< HEAD
-=======
   const { t } = useTranslation();
->>>>>>> aec402f (opciones de lenguaje)
   const [activeTab, setActiveTab] = useState('vehiclesInStock'); // Default active tab
 
   // This function will be passed to AddNewVehicle to trigger a refresh in VehiclesInStock
@@ -45,52 +39,32 @@ const AdminPage = () => {
 
   return (
     <div className="admin-page-container">
-<<<<<<< HEAD
-      <h1 className="admin-page-title">Panel de Administración</h1>
-=======
       <h1 className="admin-page-title">{t('adminPage.title')}</h1>
->>>>>>> aec402f (opciones de lenguaje)
 
       <div className="admin-tabs">
         <button 
           className={`admin-tab-button ${activeTab === 'vehiclesInStock' ? 'active' : ''}`}
           onClick={() => setActiveTab('vehiclesInStock')}
         >
-<<<<<<< HEAD
-          Vehículos en Stock
-=======
           {t('adminPage.tabs.vehicles_in_stock')}
->>>>>>> aec402f (opciones de lenguaje)
         </button>
         <button 
           className={`admin-tab-button ${activeTab === 'reservedVehicles' ? 'active' : ''}`}
           onClick={() => setActiveTab('reservedVehicles')}
         >
-<<<<<<< HEAD
-          Vehículos Reservados
-=======
           {t('adminPage.tabs.reserved_vehicles')}
->>>>>>> aec402f (opciones de lenguaje)
         </button>
         <button 
           className={`admin-tab-button ${activeTab === 'addNewVehicle' ? 'active' : ''}`}
           onClick={() => setActiveTab('addNewVehicle')}
         >
-<<<<<<< HEAD
-          Agregar Nuevo Vehículo
-=======
           {t('adminPage.tabs.add_new_vehicle')}
->>>>>>> aec402f (opciones de lenguaje)
         </button>
         <button 
           className={`admin-tab-button ${activeTab === 'registeredUsers' ? 'active' : ''}`}
           onClick={() => setActiveTab('registeredUsers')}
         >
-<<<<<<< HEAD
-          Usuarios Registrados
-=======
           {t('adminPage.tabs.registered_users')}
->>>>>>> aec402f (opciones de lenguaje)
         </button>
       </div>
 
@@ -101,8 +75,4 @@ const AdminPage = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AdminPage;
-=======
-export default AdminPage;
->>>>>>> aec402f (opciones de lenguaje)
