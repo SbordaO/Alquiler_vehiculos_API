@@ -140,7 +140,6 @@ import '../styles/AddNewVehicle.css'; // Estilos específicos para este componen
         <button className="form-button" type="submit" disabled={loading}>
           {loading ? t('addNewVehicle.loading_button') : t('addNewVehicle.add_button')}
         </button>
-        </button>
       </form>
     </div>
   );
