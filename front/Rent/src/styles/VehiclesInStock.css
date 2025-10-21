@@ -1,0 +1,87 @@
+.vehicles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.vehicle-list-item {
+  background-color: var(--nuvia-white);
+  border: 1px solid var(--nuvia-light-gray);
+  border-radius: 12px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.vehicle-list-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.vehicle-list-item-image {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.vehicle-details {
+  flex-grow: 1;
+}
+
+.vehicle-list-item h3 {
+  font-size: 1.2rem;
+  color: var(--nuvia-blue);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.vehicle-list-item p {
+  font-size: 0.9rem;
+  color: var(--nuvia-dark-gray);
+  margin-bottom: 0.3rem;
+}
+
+.vehicle-list-item p strong {
+  color: var(--nuvia-blue);
+}
+
+.vehicle-actions {
+  margin-left: auto; /* Pushes buttons to the right */
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.vehicle-actions button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-size: 0.85rem;
+}
+
+.btn-modify {
+  background-color: var(--nuvia-gold);
+  color: var(--nuvia-white);
+}
+
+.btn-modify:hover {
+  background-color: #c29b2e;
+}
+
+.btn-delete {
+  background-color: var(--nuvia-error);
+  color: var(--nuvia-white);
+}
+
+.btn-delete:hover {
+  background-color: #c0392b;
+}

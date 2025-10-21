@@ -113,7 +113,32 @@
     "delete_button": "Delete",
     "delete_confirm": "Are you sure you want to delete this vehicle?",
     "delete_success": "Vehicle deleted successfully!",
-    "delete_error": "Error deleting vehicle."
+    "delete_error": "Error deleting vehicle.",
+    "year": "Year",
+    "price_per_day": "Price per Day",
+    "available": "Available",
+    "yes": "Yes",
+    "no": "No",
+    "modify_info": "The modify functionality is not yet implemented."
+  },
+  "modifyVehicleModal": {
+    "title": "Modify Vehicle",
+    "load_error": "Error loading vehicle data for modification.",
+    "brand_label": "Brand",
+    "model_label": "Model",
+    "year_label": "Year",
+    "plate_label": "Plate",
+    "price_per_day_label": "Price per Day",
+    "image_label": "Vehicle Image",
+    "use_url_button": "Use URL",
+    "upload_file_button": "Upload File",
+    "loading_button": "Saving...",
+    "save_button": "Save Changes",
+    "cancel_button": "Cancel",
+    "upload_error": "Error uploading image. Check file type and size.",
+    "modify_success": "Vehicle updated successfully!",
+    "modify_error": "Error updating vehicle.",
+    "current_image": "Current Image:"
   },
   "reservedVehicles": {
     "title": "Reserved Vehicles",

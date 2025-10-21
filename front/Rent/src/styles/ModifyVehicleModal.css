@@ -1,0 +1,66 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--nuvia-white);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-title {
+  font-size: 2rem;
+  color: var(--nuvia-blue);
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.form-button-secondary {
+  background-color: var(--nuvia-light-gray);
+  color: var(--nuvia-dark-gray);
+}
+
+.form-button-secondary:hover {
+  background-color: #e0e0e0;
+}
+
+.current-image-preview {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.current-image-preview p {
+  font-size: 0.9rem;
+  color: var(--nuvia-dark-gray);
+  margin-bottom: 10px;
+}
+
+.current-image-preview img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--nuvia-light-gray);
+}

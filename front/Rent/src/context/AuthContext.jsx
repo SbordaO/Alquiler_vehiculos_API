@@ -8,6 +8,7 @@ const AuthContext = createContext(null);
 // Envuelve a los componentes hijos y les proporciona el estado y las funciones de autenticación.
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null); // Estado para almacenar la información del usuario autenticado (token y rol)
+  const [loading, setLoading] = useState(true); // Nuevo estado para indicar si la autenticación está cargando
   const navigate = useNavigate(); // Instancia del hook de navegación
 
   // Efecto que se ejecuta una vez al montar el componente para verificar la sesión existente
@@ -18,6 +19,7 @@ export const AuthProvider = ({ children }) => {
     if (token && userRole) {
       setUser({ token, role: userRole });
     }
+    setLoading(false); // Set loading to false after checking for token
   }, []); // El array vacío asegura que este efecto se ejecute solo una vez al montar
 
   // Función para iniciar sesión
@@ -39,7 +41,7 @@ export const AuthProvider = ({ children }) => {
 
   // Provee el estado del usuario y las funciones de login/logout a los componentes hijos
   return (
-    <AuthContext.Provider value={{ user, login, logout }}>
+    <AuthContext.Provider value={{ user, login, logout, loading }}>
       {children}
     </AuthContext.Provider>
   );

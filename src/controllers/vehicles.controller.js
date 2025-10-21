@@ -34,21 +34,20 @@ exports.list = async (req, res) => {
 // Controlador para obtener un vehículo por su ID
 exports.getById = async (req, res) => {
   try {
-    // Busca el vehículo por su ID
     const [rows] = await pool.query('SELECT * FROM vehicles WHERE id = ?', [req.params.id]);
     if (!rows.length) return res.status(404).json({ ok: false, msg: 'No encontrado' });
 
     const vehicle = rows[0];
 
-    // Obtiene las reservas activas para ese vehículo
     const [reservations] = await pool.query(
       'SELECT desde, hasta FROM reservations WHERE vehicleId = ? AND estado = \'activa\'',
       [req.params.id]
     );
 
-    res.json({ ok: true, vehicle, reservations }); // Responde con los detalles del vehículo y sus reservas
+    res.status(200).json({ ok: true, vehicle, reservations });
   } catch (err) {
-    res.status(500).json({ ok: false, msg: 'Error interno' }); // Manejo de errores del servidor
+    console.error('Backend: Error in getById:', err);
+    res.status(500).json({ ok: false, msg: 'Error interno' });
   }
 };
 

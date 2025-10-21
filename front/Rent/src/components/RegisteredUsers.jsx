@@ -46,7 +46,6 @@ const RegisteredUsers = () => {
   const handleDeleteUser = (userId) => {
     alert(t('registeredUsers.delete_user_info', { userId }));
   };
-  };
 
   const admins = users.filter(user => user.rol === 'admin');
   const clients = users.filter(user => user.rol !== 'admin');
@@ -102,6 +101,7 @@ const RegisteredUsers = () => {
         </div>
       </div>
     </div>
-    );
-  
-  export default RegisteredUsers;
+  );
+};
+
+export default RegisteredUsers;

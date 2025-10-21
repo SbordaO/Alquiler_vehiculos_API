@@ -113,7 +113,14 @@
     "delete_button": "Eliminar",
     "delete_confirm": "¿Estás seguro de que quieres eliminar este vehículo?",
     "delete_success": "¡Vehículo eliminado exitosamente!",
-    "delete_error": "Error al eliminar el vehículo."
+    "delete_error": "Error al eliminar el vehículo.",
+    "year": "Año",
+    "price_per_day": "Precio por Día",
+    "available": "Disponible",
+    "yes": "Sí",
+    "no": "No",
+    "modify_button": "Modificar",
+    "modify_info": "La funcionalidad de modificar aún no está implementada."
   },
   "reservedVehicles": {
     "title": "Vehículos Reservados",
@@ -163,5 +170,24 @@
     "make_admin_info": "Funcionalidad no implementada: Hacer admin al usuario {{userId}}",
     "modify_user_info": "Funcionalidad no implementada: Modificar usuario {{userId}}",
     "delete_user_info": "Funcionalidad no implementada: Eliminar usuario {{userId}}"
+  },
+  "modifyVehicleModal": {
+    "title": "Modificar Vehículo",
+    "load_error": "Error al cargar los datos del vehículo para la modificación.",
+    "brand_label": "Marca",
+    "model_label": "Modelo",
+    "year_label": "Año",
+    "plate_label": "Patente",
+    "price_per_day_label": "Precio por Día",
+    "image_label": "Imagen del Vehículo",
+    "use_url_button": "Usar URL",
+    "upload_file_button": "Subir Archivo",
+    "loading_button": "Guardando...",
+    "save_button": "Guardar Cambios",
+    "cancel_button": "Cancelar",
+    "upload_error": "Error al subir la imagen. Verifique el tipo y tamaño del archivo.",
+    "modify_success": "¡Vehículo actualizado exitosamente!",
+    "modify_error": "Error al actualizar el vehículo.",
+    "current_image": "Imagen Actual:"
   }
 }
