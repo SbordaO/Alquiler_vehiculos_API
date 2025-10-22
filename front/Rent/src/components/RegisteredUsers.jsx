@@ -79,23 +79,24 @@ const RegisteredUsers = () => {
         <div className="users-list-container">
           {clients.map((user) => (
             <div key={user.id} className="user-card">
-              <h3>{user.nombre}</h3>
-              <p>{user.email}</p>
-              <p><span className={`user-role ${user.rol}`}>{user.rol}</span></p>
-              <div className="user-actions">
-                <button className="btn-modify-user" onClick={() => handleModifyUser(user.id)}>{t('registeredUsers.modify_button')}</button>
-                <button className="btn-delete-user" title={t('registeredUsers.delete_button_title')}>{t('registeredUsers.delete_button')}</button>
-              </div>
-              {user.rol !== 'admin' && (
-                <button 
-                  className="make-admin-button"
-                  onClick={() => handleMakeAdmin(user.id)}
-                  disabled={loading}
-                  style={{marginTop: '10px', width: '100%'}}
-                >
-                  {t('registeredUsers.make_admin_button')}
-                </button>
-              )}
+              <React.Fragment>
+                <h3>{user.nombre}</h3>
+                <p>{user.email}</p>
+                <p><span className={`user-role ${user.rol}`}>{user.rol}</span></p>
+                <div className="user-actions">
+                  <button className="common-button btn-modify-user" onClick={() => handleModifyUser(user.id)}>{t('registeredUsers.modify_button')}</button>
+                  <button className="common-button btn-delete-user" title={t('registeredUsers.delete_button_title')}>{t('registeredUsers.delete_button')}</button>
+                  {user.rol !== 'admin' && (
+                    <button
+                      className="common-button make-admin-button"
+                      onClick={() => handleMakeAdmin(user.id)}
+                      disabled={loading}
+                    >
+                      {t('registeredUsers.make_admin_button')}
+                    </button>
+                  )}
+                </div>
+              </React.Fragment>
             </div>
           ))}
         </div>

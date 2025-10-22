@@ -9,10 +9,15 @@ const Navbar = () => {
   const { user, logout } = useAuth();
   const { t, i18n } = useTranslation();
   const [langDropdown, setLangDropdown] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // State for mobile menu
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     setLangDropdown(false);
+  };
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -22,74 +27,80 @@ const Navbar = () => {
           Nuvia Rent
         </NavLink>
         
-        <ul className="nav-menu">
-          <li className="nav-item">
-            <HashLink to="/#hero-section" className="nav-links" smooth>
-              {t('navbar.home')}
-            </HashLink>
-          </li>
-          <li className="nav-item">
-            <HashLink to="/#flota-section" className="nav-links" smooth>
-              {t('navbar.fleet')}
-            </HashLink>
-          </li>
-          <li className="nav-item">
-            <HashLink to="/#contact-section" className="nav-links" smooth>
-              {t('navbar.contact')}
-            </HashLink>
-          </li>
-          {user && (
-            <li className="nav-item">
-              <NavLink to="/reservas" className="nav-links">
-                {t('navbar.my_reservations')}
-              </NavLink>
-            </li>
-          )}
-          
-          {user && user.role === 'admin' && (
-            <li className="nav-item">
-              <NavLink to="/admin" className="nav-links">
-                {t('navbar.admin')}
-              </NavLink>
-            </li>
-          )}
-        </ul>
+        <div className="menu-icon" onClick={handleClick}>
+          <i className={isOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
+        </div>
 
-        <ul className="nav-menu nav-menu-right">
-          <li className="nav-item">
-            <div className="language-switcher">
-              <button onClick={() => setLangDropdown(!langDropdown)} className="nav-button">
-                {i18n.language.toUpperCase()}
-              </button>
-              {langDropdown && (
-                <div className="language-dropdown">
-                  <button onClick={() => changeLanguage('es')} className="nav-button">ES</button>
-                  <button onClick={() => changeLanguage('en')} className="nav-button">EN</button>
-                </div>
-              )}
-            </div>
-          </li>
-          {user ? (
+        <div className={isOpen ? 'nav-menu-container active' : 'nav-menu-container'}>
+          <ul className="nav-menu">
             <li className="nav-item">
-              <button onClick={logout} className="nav-button logout">
-                {t('navbar.logout')}
-              </button>
+              <HashLink to="/#hero-section" className="nav-links" smooth onClick={handleClick}>
+                {t('navbar.home')}
+              </HashLink>
             </li>
-          ) : (
-            <>
+            <li className="nav-item">
+              <HashLink to="/#flota-section" className="nav-links" smooth onClick={handleClick}>
+                {t('navbar.fleet')}
+              </HashLink>
+            </li>
+            <li className="nav-item">
+              <HashLink to="/#contact-section" className="nav-links" smooth onClick={handleClick}>
+                {t('navbar.contact')}
+              </HashLink>
+            </li>
+            {user && (
               <li className="nav-item">
-                <NavLink to="/login" className="nav-links">
-                  {t('navbar.login')}
+                <NavLink to="/reservas" className="nav-links" onClick={handleClick}>
+                  {t('navbar.my_reservations')}
                 </NavLink>
               </li>
+            )}
+            
+            {user && user.role === 'admin' && (
               <li className="nav-item">
-                <NavLink to="/register" className="nav-button primary">
-                  {t('navbar.register')}
+                <NavLink to="/admin" className="nav-links" onClick={handleClick}>
+                  {t('navbar.admin')}
                 </NavLink>
               </li>
-            </>
-          )}
-        </ul>
+            )}
+          </ul>
+
+          <ul className="nav-menu nav-menu-right">
+            <li className="nav-item">
+              <div className="language-switcher">
+                <button onClick={() => setLangDropdown(!langDropdown)} className="nav-button">
+                  {i18n.language.toUpperCase()}
+                </button>
+                {langDropdown && (
+                  <div className="language-dropdown">
+                    <button onClick={() => { changeLanguage('es'); handleClick(); }} className="nav-button">ES</button>
+                    <button onClick={() => { changeLanguage('en'); handleClick(); }} className="nav-button">EN</button>
+                  </div>
+                )}
+              </div>
+                      </li>
+                      {user ? (
+                        <li className="nav-item welcome-item">
+                          <span className="welcome-message">{t('navbar.welcome', { username: user.name })}</span>
+                          <button onClick={() => { logout(); handleClick(); }} className="nav-button logout">
+                            {t('navbar.logout')}
+                          </button>
+                        </li>
+                      ) : (
+                        <>
+                          <li className="nav-item">
+                            <NavLink to="/login" className="nav-links" onClick={handleClick}>
+                              {t('navbar.login')}
+                            </NavLink>
+                          </li>
+                          <li className="nav-item">
+                            <NavLink to="/register" className="nav-button primary" onClick={handleClick}>
+                              {t('navbar.register')}
+                            </NavLink>
+                          </li>
+                        </>
+                      )}
+                    </ul>        </div>
       </div>
     </nav>
   );

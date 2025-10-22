@@ -103,8 +103,8 @@ const VehiclesInStock = ({ onVehicleAdded }) => {
                 <p><strong>{t('vehiclesInStock.available')}:</strong> {vehicle.disponible ? t('vehiclesInStock.yes') : t('vehiclesInStock.no')}</p>
               </div>
               <div className="vehicle-actions">
-                <button className="btn-modify" onClick={() => handleModify(vehicle.id)}>{t('vehiclesInStock.modify_button')}</button>
-                <button className="btn-delete" onClick={() => handleDelete(vehicle.id)}>{t('vehiclesInStock.delete_button')}</button>
+                <button className="common-button btn-modify" onClick={() => handleModify(vehicle.id)}>{t('vehiclesInStock.modify_button')}</button>
+                <button className="common-button btn-delete" onClick={() => handleDelete(vehicle.id)}>{t('vehiclesInStock.delete_button')}</button>
               </div>
             </div>
           );

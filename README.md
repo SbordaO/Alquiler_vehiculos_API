@@ -2,6 +2,36 @@
 
 Este proyecto es un sistema completo para el alquiler de vehículos, compuesto por una API REST (backend) y una aplicación web (frontend).
 
+## 🛠️ Tecnologías y Herramientas
+
+Una lista detallada de las tecnologías, lenguajes y bibliotecas utilizadas en el desarrollo de este sistema:
+
+### 🌐 Lenguajes
+- **JavaScript**: Principal lenguaje de programación para el frontend y el backend.
+- **SQL**: Utilizado para la gestión y consulta de la base de datos MySQL.
+
+### 🚀 Frontend
+- **React**: Biblioteca de JavaScript para construir interfaces de usuario interactivas.
+- **Vite**: Herramienta de construcción rápida para proyectos web modernos, utilizada para el desarrollo del frontend.
+- **React Router**: Para la navegación declarativa dentro de la aplicación de una sola página (SPA).
+- **Axios**: Cliente HTTP basado en promesas para realizar peticiones a la API REST.
+- **React Toastify**: Biblioteca para mostrar notificaciones de forma sencilla y personalizable.
+- **i18next** y **React i18next**: Para la internacionalización y gestión de múltiples idiomas en la interfaz de usuario.
+- **Font Awesome**: Biblioteca de iconos escalables para mejorar la estética visual.
+- **ESLint**: Herramienta de linting para mantener la calidad y consistencia del código JavaScript/React.
+
+### ⚙️ Backend
+- **Node.js**: Entorno de ejecución de JavaScript del lado del servidor.
+- **Express.js**: Framework web rápido y minimalista para Node.js, utilizado para construir la API REST.
+- **MySQL2**: Cliente MySQL para Node.js, utilizado para interactuar con la base de datos.
+- **JWT (JSON Web Tokens)**: Para la autenticación segura de usuarios y la autorización basada en roles.
+- **Nodemon**: Utilidad que monitorea cambios en el código fuente y reinicia automáticamente el servidor durante el desarrollo.
+
+### 🗄️ Base de Datos
+- **MySQL**: Sistema de gestión de bases de datos relacionales para almacenar la información del sistema.
+
+---
+
 ## 🚀 Backend (API REST con Node.js, Express y MySQL2)
 
 API REST para gestionar usuarios, vehículos y reservas, con autenticación JWT y roles (`admin` y `cliente`).
@@ -176,14 +206,6 @@ Esta sección describe la configuración y el uso de la aplicación frontend des
    npm run dev
    ```
    Esto iniciará la aplicación en modo desarrollo, generalmente en `http://localhost:5173`.
-
----
-
-### 🛠️ Tecnologías Utilizadas en el Frontend
-
-- **React**: Biblioteca de JavaScript para construir interfaces de usuario.
-- **Vite**: Herramienta de construcción rápida para proyectos web modernos.
-- **ESLint**: Para mantener la calidad y consistencia del código.
 
 ---
 

@@ -15,26 +15,29 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const token = localStorage.getItem('token'); // Intenta obtener el token del almacenamiento local
     const userRole = localStorage.getItem('userRole'); // Intenta obtener el rol del usuario del almacenamiento local
-    // Si existen token y rol, establece el estado del usuario
-    if (token && userRole) {
-      setUser({ token, role: userRole });
+    const userName = localStorage.getItem('userName'); // Intenta obtener el nombre del usuario del almacenamiento local
+    // Si existen token, rol y nombre, establece el estado del usuario
+    if (token && userRole && userName) {
+      setUser({ token, role: userRole, nombre: userName });
     }
     setLoading(false); // Set loading to false after checking for token
   }, []); // El array vacío asegura que este efecto se ejecute solo una vez al montar
 
   // Función para iniciar sesión
-  // Almacena el token y el rol en el almacenamiento local y actualiza el estado del usuario.
-  const login = (token, role) => {
+  // Almacena el token, el rol y el nombre en el almacenamiento local y actualiza el estado del usuario.
+  const login = (token, role, userName) => {
     localStorage.setItem('token', token);
     localStorage.setItem('userRole', role);
-    setUser({ token, role });
+    localStorage.setItem('userName', userName); // Almacena el nombre del usuario
+    setUser({ token, role, nombre: userName });
   };
 
   // Función para cerrar sesión
-  // Elimina el token y el rol del almacenamiento local, resetea el estado del usuario y redirige a la página de login.
+  // Elimina el token, el rol y el nombre del almacenamiento local, resetea el estado del usuario y redirige a la página de login.
   const logout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('userRole');
+    localStorage.removeItem('userName'); // Elimina el nombre del usuario
     setUser(null);
     navigate('/login');
   };

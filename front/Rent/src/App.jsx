@@ -10,12 +10,13 @@ import AdminPage from './pages/AdminPage'; // Página de administración (proteg
 import ReservationPage from './pages/ReservationPage'; // Página para realizar una reserva
 import UserReservationsPage from './pages/UserReservationsPage'; // Página para ver las reservas del usuario
 import ProtectedRoute from './components/ProtectedRoute'; // Componente para proteger rutas que requieren autenticación
+import { AuthProvider } from './context/AuthContext'; // Import AuthProvider
 
 // Componente principal de la aplicación
 function App() {
   return (
     // Fragmento de React para agrupar elementos sin añadir nodos extra al DOM
-    <>
+    <AuthProvider>
       {/* Barra de navegación visible en todas las páginas */}
       <Navbar />
       {/* Contenedor principal del contenido de la aplicación */}
@@ -49,7 +50,7 @@ function App() {
       {/* Contenedeor de Toast Notifications */}
       <ToastContainer />
 
-    </>
+    </AuthProvider>
   );
 }
 

@@ -33,12 +33,13 @@ const LoginPage = () => {
     setLoading(true);
     try {
       const response = await axios.post('http://localhost:3000/auth/login', formData);
-      console.log(response.data);
-      login(response.data.token, response.data.rol); // Usar la función login del contexto
+      console.log('Login API Response:', response.data); // Log the full response data
+      login(response.data.token, response.data.rol, response.data.nombre); // Usar la función login del contexto y pasar el nombre
       toast.success(t('loginPage.login_success'));
       navigate('/'); // Redirigir a la página principal
     } catch (err) {
       console.error(err);
+      console.log('Login Error Response Data:', err.response?.data); // Log error response data
       setError(err.response?.data?.msg || t('loginPage.login_error'));
     } finally {
       setLoading(false);

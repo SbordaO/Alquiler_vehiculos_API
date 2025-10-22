@@ -1,3 +1,8 @@
+.admin-section {
+  max-width: 900px; /* Set a max-width for consistent layout */
+  margin: 0 auto; /* Center the content */
+}
+
 .user-group {
   margin-bottom: 40px;
 }
@@ -15,6 +20,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2rem;
+  max-width: 900px; /* Set a max-width for consistent layout */
+  margin: 0 auto; /* Center the content */
 }
 
 .user-card {
@@ -72,12 +79,7 @@
 
 .user-actions button,
 .make-admin-button {
-  padding: 10px 18px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease, transform 0.2s ease;
+  /* Inherit common button styles */
 }
 
 .btn-modify-user {
@@ -90,19 +92,154 @@
   transform: translateY(-2px);
 }
 
-.btn-delete-user {
-  background-color: var(--nuvia-error); /* Alizarin Red */
-  color: var(--nuvia-white);
-  opacity: 0.6;
-  cursor: not-allowed;
-}
+  .btn-delete-user {
 
-.make-admin-button {
-  background-color: var(--nuvia-blue); /* Nuvia Blue */
-  color: var(--nuvia-white);
-}
+    background-color: var(--nuvia-error); /* Alizarin Red */
 
-.make-admin-button:hover {
-  background-color: #081c35;
-  transform: translateY(-2px);
-}
+    color: var(--nuvia-white);
+
+    /* opacity: 0.6; Removed to make it consistent with other delete buttons */
+
+    /* cursor: not-allowed; Removed to make it consistent with other delete buttons */
+
+  }
+
+
+
+  .make-admin-button {
+
+    background-color: var(--nuvia-blue); /* Nuvia Blue */
+
+    color: var(--nuvia-white);
+
+  }
+
+
+
+  .make-admin-button:hover {
+
+    background-color: #081c35;
+
+    transform: translateY(-2px);
+
+  }
+
+
+
+  @media (max-width: 768px) {
+
+    .user-group {
+
+      margin-bottom: 30px;
+
+    }
+
+
+
+    .user-group-title {
+
+      font-size: 1.5rem;
+
+      margin-bottom: 20px;
+
+    }
+
+
+
+    .users-list-container {
+
+      grid-template-columns: 1fr; /* Stack items vertically on small screens */
+
+      gap: 1rem;
+
+    }
+
+
+
+    .user-card {
+
+      padding: 1.5rem;
+
+    }
+
+
+
+    .user-card h3 {
+
+      font-size: 1.1rem;
+
+    }
+
+
+
+    .user-card p {
+
+      font-size: 0.85rem;
+
+    }
+
+
+
+    .user-actions {
+
+      flex-direction: column;
+
+      gap: 0.5rem;
+
+      margin-top: 1.5rem;
+
+    }
+
+
+
+        .user-actions button,
+
+
+
+        .make-admin-button {
+
+
+
+          width: 100%;
+
+
+
+          margin-left: 0;
+
+
+
+        }
+
+
+
+    
+
+
+
+        .make-admin-button {
+
+
+
+          margin-top: 1rem; /* Move it down slightly */
+
+
+
+          align-self: center; /* Center the button */
+
+
+
+          width: 80%; /* Adjust width for centering */
+
+
+
+        }
+
+
+
+      }
+
+
+
+    
+
+

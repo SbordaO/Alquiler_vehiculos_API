@@ -1,3 +1,8 @@
+.admin-section {
+  max-width: 900px; /* Set a max-width for consistent layout */
+  margin: 0 auto; /* Center the content */
+}
+
 .vehicles-list {
   display: flex;
   flex-direction: column;
@@ -59,13 +64,8 @@
 }
 
 .vehicle-actions button {
-  padding: 8px 15px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: all 0.2s ease;
-  font-size: 0.85rem;
+  /* Inherit common button styles */
+  font-size: 0.85rem; /* Specific font size for these buttons */
 }
 
 .btn-modify {
@@ -84,4 +84,36 @@
 
 .btn-delete:hover {
   background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .vehicle-list-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .vehicle-list-item-image {
+    width: 100%;
+    height: 150px;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .vehicle-details {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .vehicle-actions {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+    gap: 0.5rem;
+  }
+
+  .vehicle-actions button {
+    width: 100%;
+    margin: 0;
+  }
 }

@@ -3,19 +3,19 @@
 .form-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Alinea arriba para que se vea bien en móvil */
+  align-items: center; /* Center vertically */
   padding: 2rem;
   min-height: calc(100vh - 80px - 70px); /* Resta altura de navbar y footer */
 }
 
 .form-card {
   background-color: var(--nuvia-white);
-  padding: 3rem;
+  padding: 2.5rem; /* Adjusted padding for consistency */
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  max-width: 500px; /* Slightly wider forms */
+  max-width: 500px; /* Adjusted for better visual balance */
   width: 100%;
-  margin: 3rem auto;
+  margin: 2rem 0; /* Adjusted vertical margin and left-aligned */
 }
 
 .form-title {
@@ -39,9 +39,9 @@
 }
 
 .form-input {
-  width: 100%;
-  padding: 14px 18px;
-  border-radius: 8px;
+  width: 98%;
+  padding: 10px 10px;
+  border-radius: 20px;
   border: 1px solid #ced4da;
   font-size: 1rem;
   color: var(--nuvia-dark-gray);
@@ -52,6 +52,18 @@
   outline: none;
   border-color: var(--nuvia-blue);
   box-shadow: 0 0 0 4px rgba(10, 35, 66, 0.15);
+}
+
+.common-button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease, transform 0.2s ease;
+  font-size: 0.95rem;
+  text-align: center;
+  display: inline-block;
 }
 
 .form-button {
@@ -70,6 +82,52 @@
 .form-button:hover {
   background-color: #081c35; /* Darker blue */
   transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    padding: 1rem;
+  }
+
+  .form-card {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+  }
+
+  .form-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+
+  .form-label {
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .form-input {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+
+  .form-button {
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  .error-message,
+  .success-message {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+
+  .form-switch-link {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
 }
 
 .form-button:disabled {

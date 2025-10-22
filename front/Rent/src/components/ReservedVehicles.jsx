@@ -74,8 +74,8 @@ const ReservedVehicles = () => {
             <p><strong>{t('reservedVehicles.total_cost')}:</strong> ${reservation.total}</p>
             <p><strong>{t('reservedVehicles.status')}:</strong> {reservation.estado}</p>
             <div className="reservation-actions">
-              <button className="btn-modify" onClick={() => handleModify(reservation.id)}>{t('reservedVehicles.modify_button')}</button>
-              <button className="btn-delete" onClick={() => handleCancel(reservation.id)}>{t('reservedVehicles.cancel_button')}</button>
+              <button className="common-button btn-modify" onClick={() => handleModify(reservation.id)}>{t('reservedVehicles.modify_button')}</button>
+              <button className="common-button btn-delete" onClick={() => handleCancel(reservation.id)}>{t('reservedVehicles.cancel_button')}</button>
             </div>
           </div>
         ))}

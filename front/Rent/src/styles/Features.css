@@ -48,3 +48,48 @@
   color: var(--nuvia-dark-gray);
   line-height: 1.6;
 }
+
+@media (max-width: 768px) {
+  .features-section {
+    padding: 3rem 1rem;
+  }
+
+  .features-container {
+    grid-template-columns: 1fr; /* Stack cards vertically on small screens */
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    padding: 2rem;
+  }
+
+  .feature-icon svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .feature-title {
+    font-size: 1.3rem;
+  }
+
+  .feature-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 985px) {
+  .features-container {
+    grid-template-columns: repeat(2, 1fr); /* Force two columns */
+    justify-items: center; /* Center items within their cells */
+    gap: 2rem; /* Adjust gap for this range */
+  }
+
+  .feature-card {
+    max-width: 350px; /* Limit card width to prevent stretching */
+  }
+
+  .features-container .feature-card:nth-child(3) {
+    grid-column: 1 / -1; /* Make the third card span both columns */
+    margin: 0 auto; /* Center the card itself */
+  }
+}
