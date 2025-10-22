@@ -1,6 +1,8 @@
 {
   "navbar": {
     "home": "Inicio",
+    "contact": "Contacto",
+    "fleet": "Flota",
     "login": "Iniciar Sesión",
     "register": "Registrarse",
     "admin": "Administración",
@@ -189,5 +191,10 @@
     "modify_success": "¡Vehículo actualizado exitosamente!",
     "modify_error": "Error al actualizar el vehículo.",
     "current_image": "Imagen Actual:"
+  },
+  "vehicleCard": {
+    "book_button": "Reservar Ahora",
+    "day": "día"
   }
+  
 }

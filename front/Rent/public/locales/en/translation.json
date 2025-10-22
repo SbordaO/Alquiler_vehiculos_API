@@ -1,11 +1,14 @@
 {
   "navbar": {
     "home": "Home",
+    "contact": "Contact",
+    "fleet": "Fleet",
     "login": "Login",
     "register": "Register",
     "admin": "Admin",
     "my_reservations": "My Reservations",
     "logout": "Logout"
+    
   },
   "hero": {
     "title": "Your Journey Starts Here",
@@ -119,6 +122,7 @@
     "available": "Available",
     "yes": "Yes",
     "no": "No",
+    "modify_button": "Modify",
     "modify_info": "The modify functionality is not yet implemented."
   },
   "modifyVehicleModal": {
@@ -188,5 +192,9 @@
     "make_admin_info": "Functionality not implemented: Make user {{userId}} an admin",
     "modify_user_info": "Functionality not implemented: Modify user {{userId}}",
     "delete_user_info": "Functionality not implemented: Delete user {{userId}}"
+  },
+  "vehicleCard": {
+    "book_button": "Book Now",
+    "day": "day"
   }
 }

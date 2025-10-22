@@ -30,12 +30,12 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <HashLink to="/#flota-section" className="nav-links" smooth>
-              Flota
+              {t('navbar.fleet')}
             </HashLink>
           </li>
           <li className="nav-item">
             <HashLink to="/#contact-section" className="nav-links" smooth>
-              Contacto
+              {t('navbar.contact')}
             </HashLink>
           </li>
           {user && (

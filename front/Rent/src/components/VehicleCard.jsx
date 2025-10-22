@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/VehicleCard.css';
+import { t } from 'i18next';
 
 const VehicleCard = ({ vehicle }) => {
   // If vehicle.imagen is a full URL, use it directly.
@@ -18,9 +19,9 @@ const VehicleCard = ({ vehicle }) => {
         <p className="vehicle-card-year">{vehicle.anio}</p>
         <div className="vehicle-card-price-container">
           <p className="vehicle-card-price">${vehicle.precioPorDia}</p>
-          <span className="vehicle-card-price-label">/ día</span>
+          <span className="vehicle-card-price-label">/{t('vehicleCard.day')}</span>
         </div>
-        <Link to={`/reservar/${vehicle.id}`} className="vehicle-card-button">Reservar Ahora</Link>
+        <Link to={`/reservar/${vehicle.id}`} className="vehicle-card-button">{t('vehicleCard.book_button')}</Link>
       </div>
     </div>
   );
