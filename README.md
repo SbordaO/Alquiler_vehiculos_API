@@ -32,6 +32,117 @@ Una lista detallada de las tecnologías, lenguajes y bibliotecas utilizadas en e
 
 ---
 
+## 📂 Estructura del Proyecto
+
+```
+
+├───.gitignore
+├───app.js
+├───package.json
+├───README.md
+├───.git\...
+├───front\
+│   └───Rent\
+│       ├───.gitignore
+│       ├───eslint.config.js
+│       ├───index.html
+│       ├───package.json
+│       ├───vite.config.js
+│       ├───node_modules\...
+│       ├───public\
+│       │   ├───vite.svg
+│       │   ├───images\
+│       │   │   ├───.gitkeep
+│       │   │   ├───image-1759339552751-252453239.png
+│       │   │   ├───image-1759342732466-832614679.jpeg
+│       │   │   ├───image-1759342822871-475272408.png
+│       │   │   ├───image-1759343160698-842650352.jpg
+│       │   │   ├───image-1759343355540-562920003.png
+│       │   │   ├───image-1759948958376-707733815.png
+│       │   │   ├───image-1761061490828-632601831.jpg
+│       │   │   ├───image-1761084843540-746929005.jpg
+│       │   │   ├───toyota-etios.jpg
+│       │   │   └───toyota-hilux.jpeg
+│       │   └───locales\
+│       │       ├───en\
+│       │       │   └───translation.json
+│       │       └───es\
+│       │           └───translation.json
+│       └───src\
+│           ├───App.jsx
+│           ├───i18n.js
+│           ├───main.jsx
+│           ├───assets\
+│           │   └───react.svg
+│           ├───components\
+│           │   ├───AddNewVehicle.jsx
+│           │   ├───Calendar.jsx
+│           │   ├───Features.jsx
+│           │   ├───Footer.jsx
+│           │   ├───Hero.jsx
+│           │   ├───ModifyVehicleModal.jsx
+│           │   ├───Navbar.jsx
+│           │   ├───ProtectedRoute.jsx
+│           │   ├───RegisteredUsers.jsx
+│           │   ├───ReservedVehicles.jsx
+│           │   ├───VehicleCard.jsx
+│           │   ├───VehicleCarousel.jsx
+│           │   ├───VehiclesGrid.jsx
+│           │   └───VehiclesInStock.jsx
+│           ├───context\
+│           │   └───AuthContext.jsx
+│           ├───pages\
+│           │   ├───AdminPage.jsx
+│           │   ├───HomePage.jsx
+│           │   ├───LoginPage.jsx
+│           │   ├───RegisterPage.jsx
+│           │   ├───ReservationPage.jsx
+│           │   └───UserReservationsPage.jsx
+│           └───styles\
+│               ├───AddNewVehicle.css
+│               ├───AdminPage.css
+│               ├───App.css
+│               ├───Calendar.css
+│               ├───Features.css
+│               ├───Footer.css
+│               ├───Form.css
+│               ├───Hero.css
+│               ├───index.css
+│               ├───ModifyVehicleModal.css
+│               ├───Navbar.css
+│               ├───RegisteredUsers.css
+│               ├───ReservationPage.css
+│               ├───ReservedVehicles.css
+│               ├───UserReservationsPage.css
+│               ├───VehicleCard.css
+│               ├───VehicleCarousel.css
+│               ├───VehiclesGrid.css
+│               └───VehiclesInStock.css
+├───node_modules\...
+└───src\
+    ├───config\
+    │   ├───alquiler_vehiculos.sql
+    │   └───db.js
+    ├───controllers\
+    │   ├───auth.controller.js
+    │   ├───reservations.controller.js
+    │   ├───users.controller.js
+    │   └───vehicles.controller.js
+    ├───middlewares\
+    │   ├───auth.middleware.js
+    │   └───role.middleware.js
+    ├───routes\
+    │   ├───auth.routes.js
+    │   ├───reservations.routes.js
+    │   ├───upload.routes.js
+    │   ├───users.routes.js
+    │   └───vehicles.routes.js
+    └───seed\
+        └───seed.js
+```
+
+---
+
 ## 🚀 Backend (API REST con Node.js, Express y MySQL2)
 
 API REST para gestionar usuarios, vehículos y reservas, con autenticación JWT y roles (`admin` y `cliente`).
@@ -210,6 +321,16 @@ Esta sección describe la configuración y el uso de la aplicación frontend des
 ---
 
 ### 📝 Notas del Frontend
+
+- Este template proporciona una configuración mínima para que React funcione en Vite con HMR (Hot Module Replacement) y algunas reglas de ESLint.
+- El compilador de React no está habilitado en esta plantilla. Para añadirlo, consulta la [documentación de React](https://react.dev/learn/react-compiler/installation).
+- Para expandir la configuración de ESLint, especialmente para aplicaciones de producción con TypeScript, se recomienda usar reglas de linting conscientes del tipo. Consulta la [plantilla TS de Vite](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) para integrar TypeScript y `typescript-eslint`.
+
+---
+
+## 👨‍💻 Desarrollador
+
+Sebastian Borda Ojeda
 
 - Este template proporciona una configuración mínima para que React funcione en Vite con HMR (Hot Module Replacement) y algunas reglas de ESLint.
 - El compilador de React no está habilitado en esta plantilla. Para añadirlo, consulta la [documentación de React](https://react.dev/learn/react-compiler/installation).
